@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">首頁</string>
+    <drawable name="color1">#CE0000</drawable>
+    <drawable name="color2">#007979</drawable>
+
+</resources>
