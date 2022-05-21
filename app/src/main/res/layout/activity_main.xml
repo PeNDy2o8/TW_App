@@ -4,15 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
+
 
     <Button
         android:id="@+id/btn_HealthConditions"
-        android:layout_width="225dp"
+        android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/shape_capsule"
-        android:text="身體狀況"
+        android:text="Health Conditions"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -25,11 +28,12 @@
 
     <Button
         android:id="@+id/btn_AbnormalRecord"
-        android:layout_width="225dp"
+        android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/shape_capsule"
-        android:text="異常紀錄"
+        android:text="Abnormal Record"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,11 +46,12 @@
 
     <Button
         android:id="@+id/btn_HistoryHealthConditions"
-        android:layout_width="225dp"
+        android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/shape_capsule"
-        android:text="歷史身體狀況"
+        android:text="Historical Health Condition"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -59,11 +64,13 @@
 
     <Button
         android:id="@+id/btn_HistoryLocation"
-        android:layout_width="225dp"
+        android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/shape_capsule"
-        android:text="歷史位置"
+        android:includeFontPadding="false"
+        android:text="Historical Location"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -75,14 +82,15 @@
 
     <Button
         android:id="@+id/btn_WristbandLock"
-        android:layout_width="225dp"
+        android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/btn_st"
-        android:fontFamily="cursive"
+        android:fontFamily="sans-serif-medium"
         android:includeFontPadding="false"
-        android:text="手環上鎖"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:text="Lock the wristband"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="normal"
@@ -98,11 +106,13 @@
 
     <Button
         android:id="@+id/btn_CurrentLocation"
-        android:layout_width="225dp"
+        android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/shape_capsule"
-        android:text="現在位置"
+        android:fontFamily="sans-serif-medium"
+        android:text="Current Location"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"

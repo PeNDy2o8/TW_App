@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">首頁</string>
+    <string name="app_name">Tracking Wristband System</string>
     <drawable name="color1">#CE0000</drawable>
     <drawable name="color2">#007979</drawable>
 
