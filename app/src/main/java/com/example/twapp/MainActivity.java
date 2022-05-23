@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_HealthConditions;
     private Button btn_HistoryHealthConditions;
     private Button btn_AbnormalRecord;
+    private Button btn_testtomap;
 
 
 
@@ -91,6 +92,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btn_testtomap.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,map_location.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
