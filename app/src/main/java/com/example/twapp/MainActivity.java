@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         btn_HealthConditions = findViewById(R.id.btn_HealthConditions);
         btn_HistoryHealthConditions = findViewById(R.id.btn_HistoryHealthConditions);
         btn_AbnormalRecord = findViewById(R.id.btn_AbnormalRecord);
+        btn_testtomap = findViewById(R.id.btn_testtomap);
 
 
         btn_WristbandLock.setOnClickListener(new View.OnClickListener(){
@@ -96,11 +98,10 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,map_location.class);
+                Intent intent = new Intent(MainActivity.this,MapsActivity.class);
                 startActivity(intent);
             }
         });
-
 
     }
 
