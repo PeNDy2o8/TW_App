@@ -19,6 +19,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.TimeZone;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -40,6 +41,7 @@ public class AbnormalRecord extends AppCompatActivity {
         list_Abnormal = (ListView) findViewById(R.id.list_Abnormal);
         ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, values);
         list_Abnormal.setAdapter(adapter);
+        sdf.setTimeZone(TimeZone.getTimeZone("GMT+8"));
 
         class getAbnormalRecordTask extends AsyncTask<Void, Void, Void> {
             @Override

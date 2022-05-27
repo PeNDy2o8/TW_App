@@ -14,8 +14,12 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.sql.Array;
+import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.TimeZone;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -27,6 +31,9 @@ public class HistoryHealthConditions extends AppCompatActivity {
     OkHttpClient client = new OkHttpClient();
     List<String> values = new ArrayList<>();
 
+    String tsStr = "";
+    DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +41,7 @@ public class HistoryHealthConditions extends AppCompatActivity {
         list_HistoryHealthConditions = (ListView) findViewById(R.id.list_HistoryHealthConditions);
         ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, values);
         list_HistoryHealthConditions.setAdapter(adapter);
+        sdf.setTimeZone(TimeZone.getTimeZone("GMT+8"));
 
         class getHistoryHealthConditionsTask extends AsyncTask<Void, Void, Void> {
             @Override
@@ -47,11 +55,13 @@ public class HistoryHealthConditions extends AppCompatActivity {
                         JSONArray jsonArray = new JSONArray(response.body().string());
                         for (int i = 0; i < jsonArray.length(); i++) {
                             JSONObject j =  jsonArray.getJSONObject(i);
-                            values.add(String.format("Hearth Rhythm：%s     blood oxygen：%s \nElder State：%s",
+                            Timestamp ts = new Timestamp(j.getLong("time_stamp"));
+                            tsStr = sdf.format(ts);
+                            values.add(String.format("Hearth Rhythm：%s     blood oxygen：%s \nElder State：%s\n%s",
                                     j.getString("heartrhythm"),
                                     j.getString("bloodyoxy"),
-                                    j.getString("elder_state")
-
+                                    j.getString("elder_state"),
+                                    tsStr
                             ));
 
                         }
