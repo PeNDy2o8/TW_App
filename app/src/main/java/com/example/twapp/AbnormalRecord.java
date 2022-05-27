@@ -14,6 +14,9 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.sql.Array;
+import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,6 +29,9 @@ public class AbnormalRecord extends AppCompatActivity {
     ListView list_Abnormal;
     OkHttpClient client = new OkHttpClient();
     List<String> values = new ArrayList<>();
+
+    String tsStr = "";
+    DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,16 +48,19 @@ public class AbnormalRecord extends AppCompatActivity {
                         .url("https://g8.minouo.eu.org/Condition/get/4")
                         .build();
 
+
                 try (Response response = client.newCall(request).execute()) {
                     if (response.code() == 200) {
                         JSONArray jsonArray = new JSONArray(response.body().string());
                         for (int i = 0; i < jsonArray.length(); i++) {
                             JSONObject j =  jsonArray.getJSONObject(i);
                             if (j.getString("elder_state").equals("abnormal")){
-                                values.add(String.format("ID:%s    Heart Rhythm:%s    Bloodyoxy:%s",
-                                        j.getString("id"),
+                                Timestamp ts = new Timestamp(j.getLong("time_stamp"));
+                                tsStr = sdf.format(ts);
+                                values.add(String.format("Heart Rhythm：%s    Blood Oxygen：%s  \n%s",
                                         j.getString("heartrhythm"),
-                                        j.getString("bloodyoxy")
+                                        j.getString("bloodyoxy"),
+                                        tsStr
                                 ));
                             }
 
