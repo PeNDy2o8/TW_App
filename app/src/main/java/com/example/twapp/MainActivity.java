@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_HealthConditions;
     private Button btn_HistoryHealthConditions;
     private Button btn_AbnormalRecord;
+    private Button btn_showimage;
 
 
 
@@ -41,14 +42,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
         btn_WristbandLock = findViewById(R.id.btn_WristbandLock);
         btn_CurrentLocation = findViewById(R.id.btn_CurrentLocation);
         btn_HistoryLocation = findViewById(R.id.btn_HistoryLocation);
         btn_HealthConditions = findViewById(R.id.btn_HealthConditions);
         btn_HistoryHealthConditions = findViewById(R.id.btn_HistoryHealthConditions);
         btn_AbnormalRecord = findViewById(R.id.btn_AbnormalRecord);
+        btn_showimage = findViewById(R.id.btn_showimage);
 
 
 
@@ -113,6 +113,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btn_showimage.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,ElectroCardioGraphy.class);
+                startActivity(intent);
+            }
+        });
 
 
     }

@@ -17,6 +17,10 @@
         android:theme="@style/Theme.TWApp"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".ElectroCardioGraphy"
+            android:exported="false" />
+
         <service
             android:name=".FCMService"
             android:enabled="true"
