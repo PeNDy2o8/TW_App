@@ -78,7 +78,7 @@ public class HealthConditions extends AppCompatActivity {
                                     JSONArray j = new JSONArray(result);
                                     Timestamp t = new Timestamp(j.getJSONObject(1).getLong("time_stamp"));
                                     tsSt = sdf.format(t);
-                                    System.out.println(tsSt);
+
                                     HR = j.getJSONObject(0).getString("heartrhythm");
                                     BO = j.getJSONObject(0).getString("bloodyoxy");
                                     State = j.getJSONObject(1).getString("elder_state");
@@ -104,7 +104,7 @@ public class HealthConditions extends AppCompatActivity {
                     }
                     new HRget().execute();
 
-                    try { Thread.sleep(1000);
+                    try { Thread.sleep(10000);
 
                     } catch (InterruptedException e) {
 

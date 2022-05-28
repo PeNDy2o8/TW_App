@@ -17,7 +17,14 @@
         android:theme="@style/Theme.TWApp"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
+        <service
+            android:name=".FCMService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -48,9 +55,6 @@
             android:exported="false" />
         <activity
             android:name=".HistoryLocation"
-            android:exported="false" />
-        <activity
-            android:name=".CurrentLocation"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

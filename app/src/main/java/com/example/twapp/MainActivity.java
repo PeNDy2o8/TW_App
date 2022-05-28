@@ -1,20 +1,28 @@
 package com.example.twapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.util.Log;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.messaging.FirebaseMessaging;
+
+
+
 public class MainActivity extends AppCompatActivity {
+    public static final String TAG = FCMService.TAG;
     private Button btn_WristbandLock;
     private Button btn_CurrentLocation;
     private Button btn_HistoryLocation;
     private Button btn_HealthConditions;
     private Button btn_HistoryHealthConditions;
     private Button btn_AbnormalRecord;
-    private Button btn_testtomap;
+
 
 
 
@@ -23,6 +31,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        FirebaseMessaging.getInstance().subscribeToTopic("news");
+        FirebaseMessaging.getInstance().getToken().addOnCompleteListener(new OnCompleteListener<String>() {
+            @Override
+            public void onComplete(@NonNull Task<String> task) {
+                if (!task.isSuccessful())return;
+                String token = task.getResult();
+                Log.d(TAG, "onComplete: "+token);
+            }
+        });
+
+
 
         btn_WristbandLock = findViewById(R.id.btn_WristbandLock);
         btn_CurrentLocation = findViewById(R.id.btn_CurrentLocation);
@@ -30,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         btn_HealthConditions = findViewById(R.id.btn_HealthConditions);
         btn_HistoryHealthConditions = findViewById(R.id.btn_HistoryHealthConditions);
         btn_AbnormalRecord = findViewById(R.id.btn_AbnormalRecord);
-        btn_testtomap = findViewById(R.id.btn_testtomap);
+
 
 
         btn_WristbandLock.setOnClickListener(new View.OnClickListener(){
@@ -53,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,CurrentLocation.class);
+                Intent intent = new Intent(MainActivity.this,MapsActivity.class);
                 startActivity(intent);
             }
         });
@@ -94,14 +113,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_testtomap.setOnClickListener(new View.OnClickListener(){
 
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,MapsActivity.class);
-                startActivity(intent);
-            }
-        });
 
     }
 

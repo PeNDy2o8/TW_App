@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "108026170192",
+    "project_id": "g8tw-d57c7",
+    "storage_bucket": "g8tw-d57c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108026170192:android:ac46894a46fad9d3073a55",
+        "android_client_info": {
+          "package_name": "com.example.twapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108026170192-na98lla1vqus06nfhmaikvtp7tft90ga.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARve1qpXuW5t3xCynK9ZACRZptPlZNN5w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108026170192-na98lla1vqus06nfhmaikvtp7tft90ga.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

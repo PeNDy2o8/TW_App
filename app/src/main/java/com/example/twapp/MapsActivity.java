@@ -90,6 +90,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 LatLng location = new LatLng(latigps,longgps );
                 mMap.addMarker(new MarkerOptions().position(location).title("Marker in Elder"));
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(location));
+                mMap.setMinZoomPreference(15.0f);
             }
 
 

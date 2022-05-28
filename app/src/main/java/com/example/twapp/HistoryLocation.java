@@ -45,7 +45,7 @@ public class HistoryLocation extends AppCompatActivity {
             @Override
             protected Void doInBackground(Void... Void) {
                 Request request = new Request.Builder()
-                        .url("https://g8.minouo.eu.org/Condition/gettop10/4")
+                        .url("https://g8.minouo.eu.org/Condition/get/4")
                         .build();
 
                 try (Response response = client.newCall(request).execute()) {
