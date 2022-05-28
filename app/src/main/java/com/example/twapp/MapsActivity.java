@@ -2,7 +2,9 @@ package com.example.twapp;
 
 import androidx.fragment.app.FragmentActivity;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -12,10 +14,22 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.twapp.databinding.ActivityMapsBinding;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import java.io.IOException;
+import java.sql.Timestamp;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+    OkHttpClient client = new OkHttpClient();
     private GoogleMap mMap;
     private ActivityMapsBinding binding;
+    private double longgps,latigps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +42,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
     }
 
     /**
@@ -42,10 +57,48 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        class getLocationTask extends AsyncTask<Void, Void, Void> {
+            @Override
+            protected Void doInBackground(Void... Void) {
+                Request request = new Request.Builder()
+                        .url("https://g8.minouo.eu.org/Condition/get/4")
+                        .build();
 
+
+                try (Response response = client.newCall(request).execute()) {
+                    if (response.code() == 200) {
+                        JSONArray jsonArray = new JSONArray(response.body().string());
+                        for (int i = 0; i < jsonArray.length(); i++) {
+                            JSONObject j =  jsonArray.getJSONObject(i);
+                            longgps = Double.parseDouble(j.getString("longgps"));
+                            latigps = Double.parseDouble(j.getString("latigps"));
+
+                        }
+
+                    }
+                    System.out.println(longgps);
+                    System.out.println(latigps);
+
+
+                } catch (IOException | JSONException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+            @Override
+            protected void onPostExecute(Void result) {
+                LatLng location = new LatLng(latigps,longgps );
+                mMap.addMarker(new MarkerOptions().position(location).title("Marker in Elder"));
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(location));
+            }
+
+
+
+        }
+        new getLocationTask().execute();
+
+//        System.out.println(longgps);
+//        System.out.println(latigps);
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
 }
