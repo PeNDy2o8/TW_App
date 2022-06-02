@@ -57,14 +57,9 @@ public class HealthConditions extends AppCompatActivity {
 
 
         new Thread(new Runnable() {
-
             @Override
-
             public void run() {
-
                 while (true) {
-
-
                     class HRget extends AsyncTask<Void, Void, Void> {
                         OkHttpClient client = new OkHttpClient();
                         @Override
