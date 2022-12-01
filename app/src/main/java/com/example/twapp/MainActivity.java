@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_HistoryHealthConditions;
     private Button btn_AbnormalRecord;
     private Button btn_showimage;
+    private Button btn_changeicon;
 
 
 
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         btn_HistoryHealthConditions = findViewById(R.id.btn_HistoryHealthConditions);
         btn_AbnormalRecord = findViewById(R.id.btn_AbnormalRecord);
         btn_showimage = findViewById(R.id.btn_showimage);
+        btn_changeicon = findViewById(R.id.btn_changeicon);
 
 
 
@@ -122,6 +124,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btn_changeicon.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,ChooseiconActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
