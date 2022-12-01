@@ -4,5 +4,15 @@
     <drawable name="color2">#007979</drawable>
     <string name="title_activity_map_location">map_location</string>
     <string name="title_activity_maps">MapsActivity</string>
-
+    <string name="CHN">中文</string>
+    <string name="btn_WristbandLock">Lock the Wristband</string>
+    <string name="btn_CurrentLocation">Current Location</string>
+    <string name="btn_HistoryLocation">Historical Location</string>
+    <string name="btn_HealthConditions">Health Conditions</string>
+    <string name="btn_HistoryHealthConditions">Historical Health Condition</string>
+    <string name="btn_AbnormalRecord">Abnormal Record</string>
+    <string name="btn_showimage">ElectroCardioGraphy</string>
+    <string name="tv_HealthConditiontitle">HealthConditon</string>
+    <string name="tv_bloodOxygen">BloodOxygen</string>
+    <string name="btn_Light">Give me a light</string>
 </resources>

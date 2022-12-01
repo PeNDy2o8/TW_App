@@ -14,7 +14,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/shape_capsule"
-        android:text="ElectroCardioGraphy"
+        android:text="@string/btn_showimage"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="24sp"
@@ -23,7 +23,7 @@
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.95"
+        app:layout_constraintVertical_bias="0.975"
         tools:ignore="HardcodedText" />
 
     <Button
@@ -32,16 +32,16 @@
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/shape_capsule"
-        android:text="Health Conditions"
+        android:text="@string/btn_HealthConditions"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.50"
+        app:layout_constraintVertical_bias="0.594"
         tools:ignore="HardcodedText" />
 
     <Button
@@ -50,16 +50,16 @@
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/shape_capsule"
-        android:text="Abnormal Record"
+        android:text="@string/btn_AbnormalRecord"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.80"
+        app:layout_constraintVertical_bias="0.854"
         tools:ignore="HardcodedText" />
 
     <Button
@@ -68,16 +68,16 @@
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/shape_capsule"
-        android:text="Historical Health Conditions"
+        android:text="@string/btn_HistoryHealthConditions"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="23dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65"
+        app:layout_constraintVertical_bias="0.728"
         tools:ignore="HardcodedText" />
 
     <Button
@@ -87,26 +87,26 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/shape_capsule"
         android:includeFontPadding="false"
-        android:text="Historical Location"
+        android:text="@string/btn_HistoryLocation"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35" />
+        app:layout_constraintVertical_bias="0.46" />
 
     <Button
-        android:id="@+id/btn_WristbandLock"
+        android:id="@+id/btn_Light"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/btn_st"
         android:fontFamily="sans-serif-medium"
         android:includeFontPadding="false"
-        android:text="Lock the Wristband"
+        android:text="@string/btn_Light"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@color/white"
@@ -115,10 +115,10 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintVertical_bias="0.165"
         tools:ignore="HardcodedText"
         tools:visibility="visible" />
 
@@ -129,16 +129,18 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/shape_capsule"
         android:fontFamily="sans-serif-medium"
-        android:text="Current Location"
+        android:text="@string/btn_CurrentLocation"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.20"
+        app:layout_constraintVertical_bias="0.321"
         tools:ignore="HardcodedText" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
