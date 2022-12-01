@@ -65,7 +65,6 @@ public class AbnormalRecord extends AppCompatActivity {
                                         tsStr
                                 ));
                             }
-
                         }
                     }
 

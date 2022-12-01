@@ -33,7 +33,7 @@ import okhttp3.Response;
 
 public class HealthConditions extends AppCompatActivity {
 
-    private String HR,BO,State,Date,LHR;
+    private String HR,BO,State,LHR;
     private Handler handler=null;
     private TextView tv_HeartRhythm = null;
     private TextView tv_BloodOxygen = null;
@@ -77,7 +77,6 @@ public class HealthConditions extends AppCompatActivity {
                                     HR = j.getJSONObject(0).getString("heartrhythm");
                                     BO = j.getJSONObject(0).getString("bloodyoxy");
                                     State = j.getJSONObject(1).getString("elder_state");
-
                                     LHR = j.getJSONObject(1).getString("heartrhythm");
 
                                 }
@@ -93,8 +92,6 @@ public class HealthConditions extends AppCompatActivity {
                                 tv_State.setText(State);
                                 tv_Date.setText(tsSt);
                                 tv_LastHeartRhythm.setText(LHR);
-
-
                         }
                     }
                     new HRget().execute();

@@ -16,16 +16,13 @@ import com.google.firebase.messaging.FirebaseMessaging;
 
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = FCMService.TAG;
-    private Button btn_WristbandLock;
     private Button btn_CurrentLocation;
     private Button btn_HistoryLocation;
     private Button btn_HealthConditions;
     private Button btn_HistoryHealthConditions;
     private Button btn_AbnormalRecord;
     private Button btn_showimage;
-
-
-
+    private Button btn_Light;
 
 
     @Override
@@ -42,31 +39,29 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_WristbandLock = findViewById(R.id.btn_WristbandLock);
         btn_CurrentLocation = findViewById(R.id.btn_CurrentLocation);
         btn_HistoryLocation = findViewById(R.id.btn_HistoryLocation);
         btn_HealthConditions = findViewById(R.id.btn_HealthConditions);
         btn_HistoryHealthConditions = findViewById(R.id.btn_HistoryHealthConditions);
         btn_AbnormalRecord = findViewById(R.id.btn_AbnormalRecord);
         btn_showimage = findViewById(R.id.btn_showimage);
+        btn_Light = findViewById(R.id.btn_Light);
 
 
 
-        btn_WristbandLock.setOnClickListener(new View.OnClickListener(){
+        btn_Light.setOnClickListener(new View.OnClickListener(){
             int flag = 0;
-            public void onClick(View v){
+            boolean light ;
+            public void onClick(View view){
                 switch(flag){
                     case 0:
-                        btn_WristbandLock.setActivated(false);
-                        flag = 1;
+                        light= true;
                         break;
                     case 1:
-                        btn_WristbandLock.setActivated(true);
-                        flag = 0 ;
+                        light= false;
                         break;
                 }
-            }
-        });
+            }});
 
         btn_CurrentLocation.setOnClickListener(new View.OnClickListener(){
 
@@ -122,8 +117,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
     }
-
-
 }

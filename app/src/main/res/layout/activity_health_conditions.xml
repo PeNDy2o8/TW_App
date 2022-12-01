@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:background="@color/teal_700"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="Current Health Conditions"
+        android:text="@string/tv_HealthConditiontitle"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="34sp"
@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
-        android:text="062"
+        android:text="   "
         android:textSize="85dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -100,7 +100,7 @@
             android:layout_marginEnd="-130dp"
             android:layout_marginBottom="0dp"
             app:srcCompat="@drawable/blooddrop" />
-        d
+
 
         <TextView
             android:id="@+id/tv_BloodOxygen"
@@ -123,7 +123,7 @@
             android:layout_marginEnd="130dp"
             android:layout_marginBottom="0dp"
             android:fontFamily="sans-serif-black"
-            android:text="Blood Oxygen"
+            android:text="@string/tv_bloodOxygen"
             android:textAlignment="center"
             android:textSize="30dp" />
 
