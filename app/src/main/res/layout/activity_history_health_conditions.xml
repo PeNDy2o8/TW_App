@@ -7,12 +7,12 @@
     tools:context=".HistoryHealthConditions">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tv_HistoriclHealthConditions"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/teal_700"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="Historicl Health Conditions"
+        android:text="@string/tv_HistoriclHealthConditons"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="34sp"
@@ -30,5 +30,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_HistoriclHealthConditions" />
 </androidx.constraintlayout.widget.ConstraintLayout>
