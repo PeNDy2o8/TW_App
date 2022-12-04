@@ -8,12 +8,12 @@
     tools:ignore="ExtraText">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_HealthConditonTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/teal_700"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="@string/tv_HealthConditiontitle"
+        android:text="@string/tv_HealthConditionTitle"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="34sp"
@@ -141,10 +141,10 @@
     </FrameLayout>
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/tv_LastTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Last time "
+        android:text="@string/tv_LastTime"
         android:textSize="22dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -171,7 +171,7 @@
             android:layout_marginEnd="60dp"
             android:layout_marginBottom="0dp"
             android:fontFamily="sans-serif-black"
-            android:text="Abnormal"
+            android:text="@string/tv_State"
             android:textSize="35dp" />
 
         <TextView
@@ -183,7 +183,7 @@
             android:layout_marginEnd="70dp"
             android:layout_marginBottom="0dp"
             android:fontFamily="sans-serif-medium"
-            android:text="2022/XX/XX 下午XX:XX"
+            android:text="@string/tv_Date"
             android:textSize="20dp" />
 
         <TextView

@@ -12,7 +12,13 @@
     <string name="btn_HistoryHealthConditions">Historical Health Condition</string>
     <string name="btn_AbnormalRecord">Abnormal Record</string>
     <string name="btn_showimage">ElectroCardioGraphy</string>
-    <string name="tv_HealthConditiontitle">HealthConditon</string>
+    <string name="tv_HealthConditionTitle">Health Conditon</string>
     <string name="tv_bloodOxygen">BloodOxygen</string>
-    <string name="btn_Light">Give me a light</string>
+    <string name="btn_Light">Light On</string>
+    <string name="tv_Historicl_Location">Historicl Location</string>
+    <string name="tv_HistoriclHealthConditons">Historicl Health Conditons</string>
+    <string name="tv_State"> </string>
+    <string name="tv_LastTime">Last Time</string>
+    <string name="tv_Date"> </string>
+    <string name="tv_AbnormalRecordTitle">Abnormal Record</string>
 </resources>
