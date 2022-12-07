@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
 
     <application
+        android:name=".Myappicon"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -17,11 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TWApp"
         android:usesCleartextTraffic="true"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        android:screenOrientation="portrait">
 
-        <activity
-            android:name=".ElectroCardioGraphy"
-            android:exported="false" />
 
         <service
             android:name=".FCMService"
@@ -43,46 +42,71 @@
              project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
              "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
         -->
+
         <activity
-            android:name="ChooseiconActivity"
-            android:exported="true"/>
+            android:name=".ElectroCardioGraphy"
+            android:exported="false" />
+
         <activity
             android:name=".AbnormalRecord"
             android:exported="false" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCLJkTj9SezcIJXVnRieHwBn2mVCLSqBFw" />
+
         <activity
             android:name=".MapsActivity"
             android:exported="false"
             android:label="@string/title_activity_maps" />
+
         <activity
             android:name=".HistoryHealthConditions"
             android:exported="false" />
+
         <activity
             android:name=".HealthConditions"
             android:exported="false" />
+
         <activity
             android:name=".HistoryLocation"
             android:exported="false" />
+
+
+        <activity android:name=".MainActivity"/>
+
         <activity
-            android:name=".MainActivity"
+            android:name="ChooseiconActivity"
+            android:exported="true"/>
+
+
+
+        <!--        以下icon-->
+
+
+
+        <activity-alias
+            android:name=".Defaulticon"
+            android:enabled="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:targetActivity=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity-alias>
 
 
-        <!--        以下icon-->
 
         <activity-alias
-            android:name="w1"
-            android:targetActivity=".MainActivity"
-            android:label="@string/app_name"
+
+            android:name=".W1"
             android:enabled="false"
             android:icon="@mipmap/wristband"
+            android:label="@string/app_name"
+            android:targetActivity=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -91,7 +115,8 @@
         </activity-alias>
 
         <activity-alias
-            android:name="w2"
+
+            android:name=".W2"
             android:targetActivity=".MainActivity"
             android:label="@string/app_name"
             android:enabled="false"
@@ -104,7 +129,8 @@
         </activity-alias>
 
         <activity-alias
-            android:name="w3"
+
+            android:name=".W3"
             android:targetActivity=".MainActivity"
             android:label="@string/app_name"
             android:enabled="false"
@@ -117,9 +143,6 @@
         </activity-alias>
 
         <!--        以上icon-->
-
-
-
     </application>
 
 </manifest>
