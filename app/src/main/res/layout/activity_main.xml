@@ -13,10 +13,10 @@
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/shape_capsule"
+
         android:text="@string/btn_showimage"
         android:textAllCaps="false"
-        android:textColor="@color/white"
+
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,16 +25,33 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.975"
         tools:ignore="HardcodedText" />
+    <Button
+        android:id="@+id/btn_Theme"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+
+        android:text="Theme"
+        android:textAllCaps="false"
+
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/btn_HealthConditions"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/shape_capsule"
+
         android:text="@string/btn_HealthConditions"
         android:textAllCaps="false"
-        android:textColor="@color/white"
+
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,10 +66,9 @@
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/shape_capsule"
         android:text="@string/btn_AbnormalRecord"
         android:textAllCaps="false"
-        android:textColor="@color/white"
+
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,10 +83,10 @@
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/shape_capsule"
+
         android:text="@string/btn_HistoryHealthConditions"
         android:textAllCaps="false"
-        android:textColor="@color/white"
+
         android:textSize="23dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,11 +101,11 @@
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/shape_capsule"
+
         android:includeFontPadding="false"
         android:text="@string/btn_HistoryLocation"
         android:textAllCaps="false"
-        android:textColor="@color/white"
+
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,13 +119,13 @@
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/btn_st"
+
         android:fontFamily="sans-serif-medium"
         android:includeFontPadding="false"
         android:text="@string/btn_Light"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="@color/white"
+
         android:textSize="24sp"
         android:textStyle="normal"
         android:visibility="visible"
@@ -127,11 +143,11 @@
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/shape_capsule"
+
         android:fontFamily="sans-serif-medium"
         android:text="@string/btn_CurrentLocation"
         android:textAllCaps="false"
-        android:textColor="@color/white"
+
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

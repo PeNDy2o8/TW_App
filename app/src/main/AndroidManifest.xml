@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:name=".Theme_state"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,12 +15,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TWApp"
+        android:theme="@style/Theme_one"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
             android:name=".ElectroCardioGraphy"
             android:exported="false" />
+
 
         <service
             android:name=".FCMService"
@@ -48,6 +50,9 @@
             android:name=".MapsActivity"
             android:exported="false"
             android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".Theme"
+            android:exported="false" />
         <activity
             android:name=".AbnormalRecord"
             android:exported="false" />

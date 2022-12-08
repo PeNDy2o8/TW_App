@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_AbnormalRecord;
     private Button btn_showimage;
     private Button btn_Light;
+    private Button btn_Theme;
 
 
     @Override
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         btn_AbnormalRecord = findViewById(R.id.btn_AbnormalRecord);
         btn_showimage = findViewById(R.id.btn_showimage);
         btn_Light = findViewById(R.id.btn_Light);
+        btn_Theme = findViewById(R.id.btn_Theme);
 
 
 
@@ -68,6 +70,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+        btn_Theme.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Theme.class);
                 startActivity(intent);
             }
         });
