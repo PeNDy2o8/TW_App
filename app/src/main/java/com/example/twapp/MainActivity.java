@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_AbnormalRecord;
     private Button btn_showimage;
     private Button btn_Light;
+    private Button btn_RingChange;
 
 
     @Override
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         btn_AbnormalRecord = findViewById(R.id.btn_AbnormalRecord);
         btn_showimage = findViewById(R.id.btn_showimage);
         btn_Light = findViewById(R.id.btn_Light);
-
+        btn_RingChange = findViewById(R.id.btn_RingChange);
 
 
         btn_Light.setOnClickListener(new View.OnClickListener(){
@@ -116,6 +117,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        btn_RingChange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,RingChange.class);
+                startActivity(intent);
+            }
+        });
     }
 }
