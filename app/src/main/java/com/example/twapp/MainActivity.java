@@ -23,8 +23,31 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_AbnormalRecord;
     private Button btn_showimage;
     private Button btn_Light;
+    private Button btn_setting;
     private Button btn_RingChange;
+    public static float fontsize = 20;
+    public void onResume(){
+        super.onResume();
+        btn_setting = findViewById(R.id.btn_setting);
+        btn_showimage = findViewById(R.id.btn_showimage);
+        btn_HealthConditions = findViewById(R.id.btn_HealthConditions);
+        btn_AbnormalRecord = findViewById(R.id.btn_AbnormalRecord);
+        btn_HistoryHealthConditions = findViewById(R.id. btn_HistoryHealthConditions);
+        btn_HistoryLocation = findViewById(R.id.btn_HistoryLocation);
+        btn_Light = findViewById(R.id. btn_Light);
+        btn_CurrentLocation = findViewById(R.id.btn_CurrentLocation);
+        btn_RingChange = findViewById(R.id.btn_RingChange);
 
+        btn_setting.setTextSize(fontsize);
+        btn_showimage.setTextSize(fontsize);
+        btn_HealthConditions.setTextSize(fontsize);
+        btn_AbnormalRecord.setTextSize(fontsize);
+        btn_HistoryHealthConditions.setTextSize(fontsize);
+        btn_HistoryLocation.setTextSize(fontsize);
+        btn_Light.setTextSize(fontsize);
+        btn_CurrentLocation.setTextSize(fontsize);
+        btn_RingChange.setTextSize(fontsize);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         btn_showimage = findViewById(R.id.btn_showimage);
         btn_Light = findViewById(R.id.btn_Light);
         btn_RingChange = findViewById(R.id.btn_RingChange);
-
+        btn_setting = findViewById(R.id.btn_setting);
 
         btn_Light.setOnClickListener(new View.OnClickListener(){
             int flag = 0;
@@ -117,12 +140,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        btn_RingChange.setOnClickListener(new View.OnClickListener() {
+        btn_setting.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,RingChange.class);
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,FontSize.class);
                 startActivity(intent);
             }
         });
+//        btn_RingChange.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this,RingChange.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 }
