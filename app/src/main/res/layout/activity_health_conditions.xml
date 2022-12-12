@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".HealthConditions"
     tools:ignore="ExtraText">
 
@@ -33,7 +34,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.204"
+        app:layout_constraintVertical_bias="0.199"
         app:srcCompat="@drawable/red" />
 
     <TextView
@@ -43,6 +44,8 @@
         android:fontFamily="sans-serif-medium"
         android:text="   "
         android:textSize="85dp"
+        android:background="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.358"
@@ -69,6 +72,8 @@
         android:fontFamily="serif"
         android:text="BPM"
         android:textSize="24sp"
+        android:background="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.688"
@@ -110,6 +115,8 @@
             android:layout_marginTop="0dp"
             android:layout_marginEnd="-50dp"
             android:layout_marginBottom="0dp"
+            android:background="#4D9D9D9D"
+            android:textColor="@color/black"
             android:fontFamily="sans-serif-medium"
             android:text="100%"
             android:textSize="40dp" />
@@ -122,6 +129,8 @@
             android:layout_marginTop="0dp"
             android:layout_marginEnd="130dp"
             android:layout_marginBottom="0dp"
+            android:background="#4D9D9D9D"
+            android:textColor="@color/black"
             android:fontFamily="sans-serif-black"
             android:text="@string/tv_bloodOxygen"
             android:textAlignment="center"
@@ -136,6 +145,8 @@
             android:layout_marginEnd="-130dp"
             android:layout_marginBottom="0dp"
             android:fontFamily="serif"
+            android:background="#4D9D9D9D"
+            android:textColor="@color/black"
             android:text="mmHg"
             android:textSize="15dp" />
     </FrameLayout>
@@ -146,6 +157,8 @@
         android:layout_height="wrap_content"
         android:text="@string/tv_LastTime"
         android:textSize="22dp"
+        android:background="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.047"
@@ -172,6 +185,8 @@
             android:layout_marginBottom="0dp"
             android:fontFamily="sans-serif-black"
             android:text="@string/tv_State"
+            android:background="#4D9D9D9D"
+            android:textColor="@color/black"
             android:textSize="35dp" />
 
         <TextView
@@ -182,6 +197,8 @@
             android:layout_marginTop="30dp"
             android:layout_marginEnd="70dp"
             android:layout_marginBottom="0dp"
+            android:background="#4D9D9D9D"
+            android:textColor="@color/black"
             android:fontFamily="sans-serif-medium"
             android:text="@string/tv_Date"
             android:textSize="20dp" />
@@ -189,11 +206,13 @@
         <TextView
             android:id="@+id/tv_LastHeartRhythm"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="-10dp"
             android:layout_marginEnd="-80dp"
             android:layout_marginBottom="0dp"
+            android:background="#4D9D9D9D"
+            android:textColor="@color/black"
             android:fontFamily="sans-serif-medium"
             android:text="050"
             android:textSize="45dp" />
@@ -207,6 +226,8 @@
             android:layout_marginEnd="-150dp"
             android:layout_marginBottom="0dp"
             android:fontFamily="serif"
+            android:background="#4D9D9D9D"
+            android:textColor="@color/black"
             android:text="BPM"
             android:textSize="24dp" />
 

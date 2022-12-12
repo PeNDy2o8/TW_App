@@ -18,9 +18,6 @@ import com.google.firebase.messaging.FirebaseMessaging;
 
 public class Theme extends AppCompatActivity{
 
-    public Button btn_theme_one;
-    public Button btn_theme_two;
-    public Button btn_theme_three;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +27,9 @@ public class Theme extends AppCompatActivity{
          * this.isNightModeEnabled = mPrefs.getBoolean(NIGHT_MODE, false);
          * 這一行)*/
         System.out.println("oncreate");
-        Utils.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_theme);
 
-        btn_theme_one = (Button)findViewById(R.id.btn_Theme_one);
-        btn_theme_two = (Button)findViewById(R.id.btn_Theme_two);
-        btn_theme_three = (Button)findViewById(R.id.btn_Theme_three);
+
 
         if (Theme_state.getInstance().isNightMode()) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
@@ -66,27 +60,6 @@ public class Theme extends AppCompatActivity{
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 finish();
                 startActivity(intent);
-            }
-        });
-        btn_theme_one.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.println("theme_one");
-                Utils.changeToTheme(Theme.this, Utils.THEME_one);
-            }
-        });
-        btn_theme_two.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.println("theme_two");
-                Utils.changeToTheme(Theme.this, Utils.THEME_two);
-            }
-        });
-        btn_theme_three.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.println("theme_three");
-                Utils.changeToTheme(Theme.this, Utils.THEME_three);
             }
         });
 
