@@ -28,7 +28,9 @@ import okhttp3.Response;
 
 public class AbnormalRecord extends AppCompatActivity {
     ListView list_Abnormal;
-    OkHttpClient client = new OkHttpClient();
+
+    OkHttpClient client = OkHttpsSingle.getOkHttp();
+
     List<String> values = new ArrayList<>();
 
     String tsStr = "";
@@ -81,6 +83,5 @@ public class AbnormalRecord extends AppCompatActivity {
             }
         }
         new getAbnormalRecordTask().execute();
-
     }
 }

@@ -28,7 +28,9 @@ import okhttp3.Response;
 
 public class HistoryLocation extends AppCompatActivity {
     ListView list_HistoryLocation;
-    OkHttpClient client = new OkHttpClient();
+
+    OkHttpClient client = OkHttpsSingle.getOkHttp();
+
     List<String> values = new ArrayList<>();
     String tsStr = "";
     DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
