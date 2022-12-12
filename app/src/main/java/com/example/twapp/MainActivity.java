@@ -23,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_HistoryHealthConditions;
     private Button btn_AbnormalRecord;
     private Button btn_showimage;
-
+//    private Button btn_change;
+    private Button btn_Notify;
 
 
 
@@ -49,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
         btn_HistoryHealthConditions = findViewById(R.id.btn_HistoryHealthConditions);
         btn_AbnormalRecord = findViewById(R.id.btn_AbnormalRecord);
         btn_showimage = findViewById(R.id.btn_showimage);
+//        btn_change = findViewById(R.id.btn_change);
+        btn_Notify = findViewById(R.id.btn_Notify);
 
 
 
@@ -122,6 +125,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btn_Notify.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Notify.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
