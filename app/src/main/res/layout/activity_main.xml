@@ -9,30 +9,12 @@
 
 
     <Button
-        android:id="@+id/btn_showimage"
+        android:id="@+id/btn_changeicon"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/shape_capsule"
-        android:text="@string/btn_showimage"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.975"
-        tools:ignore="HardcodedText" />
-
-    <Button
-        android:id="@+id/btn_HealthConditions"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/shape_capsule"
-        android:text="@string/btn_HealthConditions"
+        android:text="ChangeIcon"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="24sp"
@@ -59,7 +41,7 @@
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.854"
+        app:layout_constraintVertical_bias="0.626"
         tools:ignore="HardcodedText" />
 
     <Button
@@ -81,13 +63,27 @@
         tools:ignore="HardcodedText" />
 
     <Button
-        android:id="@+id/btn_HistoryLocation"
+        android:id="@+id/btn_Light"
+        app:layout_constraintVertical_bias="0.743"
+        tools:ignore="HardcodedText"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/shape_capsule"
-        android:includeFontPadding="false"
-        android:text="@string/btn_HistoryLocation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btn_HealthConditions"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_capsule"
+        android:text="Health Conditions"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="24sp"
@@ -96,23 +92,20 @@
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.46" />
+        app:layout_constraintVertical_bias="0.4"
+        tools:ignore="HardcodedText" />
 
     <Button
-        android:id="@+id/btn_Light"
+        android:id="@+id/btn_HistoryLocation"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/btn_st"
-        android:fontFamily="sans-serif-medium"
+        android:background="@drawable/shape_capsule"
         android:includeFontPadding="false"
-        android:text="@string/btn_Light"
+        android:text="Historical Location"
         android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@color/white"
         android:textSize="24sp"
-        android:textStyle="normal"
-        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.45"
@@ -157,7 +150,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.041"
+        app:layout_constraintVertical_bias="0.156"
         tools:ignore="HardcodedText" />
 
 
