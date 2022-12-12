@@ -21,10 +21,9 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_HealthConditions;
     private Button btn_HistoryHealthConditions;
     private Button btn_AbnormalRecord;
-    private Button btn_showimage;
     private Button btn_Light;
     private Button btn_RingChange;
-
+    private Button btn_changeicon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,10 +44,9 @@ public class MainActivity extends AppCompatActivity {
         btn_HealthConditions = findViewById(R.id.btn_HealthConditions);
         btn_HistoryHealthConditions = findViewById(R.id.btn_HistoryHealthConditions);
         btn_AbnormalRecord = findViewById(R.id.btn_AbnormalRecord);
-        btn_showimage = findViewById(R.id.btn_showimage);
         btn_Light = findViewById(R.id.btn_Light);
         btn_RingChange = findViewById(R.id.btn_RingChange);
-
+        btn_changeicon = findViewById(R.id.btn_changeicon);
 
         btn_Light.setOnClickListener(new View.OnClickListener(){
             int flag = 0;
@@ -109,14 +107,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_showimage.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,ElectroCardioGraphy.class);
-                startActivity(intent);
-            }
-        });
         btn_RingChange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -124,5 +114,13 @@ public class MainActivity extends AppCompatActivity {
 //                startActivity(intent);
             }
         });
+        btn_changeicon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ChooseiconActivity.class);
+                startActivity(intent);
+            }
+        }
+        );
     }
 }

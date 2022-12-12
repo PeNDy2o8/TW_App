@@ -1,0 +1,25 @@
+<resources>
+    <string name="CHN">中文</string>
+    <string name="app_name">追蹤手環系統</string>
+    <drawable name="color1">#CE0000</drawable>
+    <drawable name="color2">#007979</drawable>
+    <string name="title_activity_map_location">map_location</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="btn_WristbandLock">鎖上手環</string>
+    <string name="btn_CurrentLocation">即時位置</string>
+    <string name="btn_HistoryLocation">歷史位置</string>
+    <string name="btn_HealthConditions">健康狀況</string>
+    <string name="btn_HistoryHealthConditions">歷史狀況</string>
+    <string name="btn_AbnormalRecord">異常紀錄</string>
+    <string name="btn_showimage">心電圖</string>
+    <string name="tv_HealthConditionTitle">HealthConditon</string>
+    <string name="tv_bloodOxygen">血氧</string>
+    <string name="btn_Light">開燈</string>
+    <string name="tv_Historicl_Location">歷史位置</string>
+    <string name="tv_HistoriclHealthConditons">歷史健康狀況</string>
+    <string name="tv_State"> </string>
+    <string name="tv_LastTime">上一筆紀錄</string>
+    <string name="tv_Date"> </string>
+    <string name="tv_AbnormalRecordTitle">異常紀錄</string>
+
+</resources>
