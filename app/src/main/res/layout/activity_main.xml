@@ -8,25 +8,7 @@
     >
 
 
-    <Button
-        android:id="@+id/btn_changeicon"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/shape_capsule"
-        android:text="ChangeIcon"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.548"
-        tools:ignore="HardcodedText" />
-
-<!--    <Button-->
+    <!--    <Button-->
 <!--        android:id="@+id/btn_change"-->
 <!--        android:layout_width="300dp"-->
 <!--        android:layout_height="60dp"-->
@@ -45,6 +27,24 @@
 <!--        tools:ignore="HardcodedText" />-->
 
     <Button
+        android:id="@+id/btn_changeicon"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_capsule"
+        android:text="ChangeIcon"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.456"
+        tools:ignore="HardcodedText" />
+
+    <Button
         android:id="@+id/btn_AbnormalRecord"
         android:layout_width="300dp"
         android:layout_height="60dp"
@@ -59,7 +59,7 @@
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.677"
+        app:layout_constraintVertical_bias="0.576"
         tools:ignore="HardcodedText" />
 
     <Button
@@ -77,7 +77,7 @@
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.788"
+        app:layout_constraintVertical_bias="0.692"
         tools:ignore="HardcodedText" />
 
     <Button
@@ -95,7 +95,7 @@
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.935"
+        app:layout_constraintVertical_bias="0.811"
         tools:ignore="HardcodedText" />
 
     <Button
@@ -113,7 +113,7 @@
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.428"
+        app:layout_constraintVertical_bias="0.337"
         tools:ignore="HardcodedText" />
 
     <Button
@@ -132,9 +132,10 @@
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.165"
+        app:layout_constraintVertical_bias="0.104"
         tools:ignore="HardcodedText"
         tools:visibility="visible" />
+
 
     <Button
         android:id="@+id/btn_CurrentLocation"
@@ -152,7 +153,7 @@
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.284"
+        app:layout_constraintVertical_bias="0.213"
         tools:ignore="HardcodedText" />
 
     <Button
@@ -171,9 +172,8 @@
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.027"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="HardcodedText" />
-
 
     <Button
         android:id="@+id/btn_Notify"
@@ -190,6 +190,6 @@
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.93"
         tools:ignore="HardcodedText" />
 </androidx.constraintlayout.widget.ConstraintLayout>
