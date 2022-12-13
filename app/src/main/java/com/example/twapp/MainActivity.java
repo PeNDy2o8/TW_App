@@ -22,13 +22,33 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_HistoryHealthConditions;
     private Button btn_AbnormalRecord;
     private Button btn_Light;
+    private Button btn_setting;
     private Button btn_RingChange;
     private Button btn_changeicon;
 
 //    private Button btn_change;
     private Button btn_Notify;
+    public static float fontsize = 20;
+    public void onResume(){
+        super.onResume();
+        btn_setting = findViewById(R.id.btn_setting);
+        btn_HealthConditions = findViewById(R.id.btn_HealthConditions);
+        btn_AbnormalRecord = findViewById(R.id.btn_AbnormalRecord);
+        btn_HistoryHealthConditions = findViewById(R.id. btn_HistoryHealthConditions);
+        btn_HistoryLocation = findViewById(R.id.btn_HistoryLocation);
+        btn_Light = findViewById(R.id. btn_Light);
+        btn_CurrentLocation = findViewById(R.id.btn_CurrentLocation);
+        btn_RingChange = findViewById(R.id.btn_RingChange);
 
-
+        btn_setting.setTextSize(fontsize);
+        btn_HealthConditions.setTextSize(fontsize);
+        btn_AbnormalRecord.setTextSize(fontsize);
+        btn_HistoryHealthConditions.setTextSize(fontsize);
+        btn_HistoryLocation.setTextSize(fontsize);
+        btn_Light.setTextSize(fontsize);
+        btn_CurrentLocation.setTextSize(fontsize);
+        btn_RingChange.setTextSize(fontsize);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         btn_changeicon = findViewById(R.id.btn_changeicon);
 //        btn_change = findViewById(R.id.btn_change);
         btn_Notify = findViewById(R.id.btn_Notify);
+        btn_setting = findViewById(R.id.btn_setting);
         btn_Light.setOnClickListener(new View.OnClickListener(){
             int flag = 0;
             boolean light ;
@@ -128,13 +149,28 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         );
-        btn_Notify.setOnClickListener(new View.OnClickListener(){
+        btn_Notify.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,Notify.class);
-                startActivity(intent);
-            }
+                Intent intent = new Intent(MainActivity.this, Notify.class);
+                btn_setting.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(MainActivity.this, FontSize.class);
+                        startActivity(intent);
+                    }
+                });
+
+//        btn_RingChange.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this,RingChange.class);
+//                startActivity(intent);
+//            }
+//        });
+//            }
+        }
         });
     }
 }

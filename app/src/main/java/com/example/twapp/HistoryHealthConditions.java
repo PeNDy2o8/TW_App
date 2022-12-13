@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,10 +32,16 @@ public class HistoryHealthConditions extends AppCompatActivity {
     ListView list_HistoryHealthConditions;
     OkHttpClient client = new OkHttpClient();
     List<String> values = new ArrayList<>();
-
     String tsStr = "";
     DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+    private TextView tv_HistoriclHealthConditions;
+    public static float fontsize = 20;
+    public void onResume(){
+        super.onResume();
+        tv_HistoriclHealthConditions = findViewById(R.id.tv_HistoriclHealthConditions);
 
+        tv_HistoriclHealthConditions.setTextSize(fontsize);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
