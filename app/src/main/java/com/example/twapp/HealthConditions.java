@@ -93,7 +93,7 @@ public class HealthConditions extends AppCompatActivity {
             public void run() {
                 while (true) {
                     class HRget extends AsyncTask<Void, Void, Void> {
-                        OkHttpClient client = new OkHttpClient();
+                        OkHttpClient client = OkHttpsSingle.getOkHttp();
                         @Override
                         protected Void doInBackground(Void... voids) {
                             Request request = new Request.Builder()
