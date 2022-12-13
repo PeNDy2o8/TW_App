@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="437dp"
+        android:layout_height="66dp"
+        android:ems="10"
+        android:textColor="@color/black"
+        android:hint="Current text size: "
+
+        android:inputType="textPersonName"
+        android:background="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="71dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="103dp"
+        android:text="TextView"
+        android:hint= "This is the current text size..."
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="214dp"
+        />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="35"
+        android:progress="0" />
+</LinearLayout>

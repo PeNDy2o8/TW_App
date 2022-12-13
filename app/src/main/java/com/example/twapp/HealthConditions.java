@@ -6,6 +6,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -42,6 +43,37 @@ public class HealthConditions extends AppCompatActivity {
     private TextView tv_LastHeartRhythm = null;
     String tsSt = "";
     DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+
+    private TextView tv_HealthConditonTitle,textView7,textView10,textView11,textView17,textView13,tv_LastTime;
+    public static float fontsize = 20;
+    public void onResume(){
+        super.onResume();
+        tv_HealthConditonTitle = findViewById(R.id.tv_HealthConditonTitle);
+        tv_HeartRhythm = findViewById(R.id.tv_HeartRhythm);
+        textView7 = findViewById(R.id.textView7);
+        tv_BloodOxygen = findViewById(R.id.tv_BloodOxygen);
+        textView10 = findViewById(R.id.textView10);
+        textView11 = findViewById(R.id.textView11);
+        tv_LastTime = findViewById(R.id.tv_LastTime);
+        tv_State = findViewById(R.id.tv_State);
+        tv_Date = findViewById(R.id.tv_Date);
+        tv_LastHeartRhythm = findViewById(R.id.tv_LastHeartRhythm);
+        textView17 = findViewById(R.id.textView17);
+        textView13 = findViewById(R.id.textView13);
+
+        tv_HealthConditonTitle.setTextSize(fontsize);
+        tv_HeartRhythm.setTextSize(fontsize);
+        textView7.setTextSize(fontsize);
+        tv_BloodOxygen.setTextSize(fontsize);
+        textView10.setTextSize(fontsize);
+        textView11.setTextSize(fontsize);
+        tv_LastTime.setTextSize(fontsize);
+        tv_State.setTextSize(fontsize);
+        tv_Date.setTextSize(fontsize);
+        tv_LastHeartRhythm.setTextSize(fontsize);
+        textView17.setTextSize(fontsize);
+        textView13.setTextSize(fontsize);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
