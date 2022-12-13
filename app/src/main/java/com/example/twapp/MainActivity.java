@@ -25,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_RingChange;
     private Button btn_changeicon;
 
+//    private Button btn_change;
+    private Button btn_Notify;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +52,8 @@ public class MainActivity extends AppCompatActivity {
         btn_Light = findViewById(R.id.btn_Light);
         btn_RingChange = findViewById(R.id.btn_RingChange);
         btn_changeicon = findViewById(R.id.btn_changeicon);
-
+//        btn_change = findViewById(R.id.btn_change);
+        btn_Notify = findViewById(R.id.btn_Notify);
         btn_Light.setOnClickListener(new View.OnClickListener(){
             int flag = 0;
             boolean light ;
@@ -122,5 +128,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         );
+        btn_Notify.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Notify.class);
+                startActivity(intent);
+            }
+        });
     }
 }
