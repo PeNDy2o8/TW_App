@@ -129,7 +129,6 @@
         </activity-alias>
 
         <activity-alias
-
             android:name=".W3"
             android:targetActivity=".MainActivity"
             android:label="@string/app_name"
