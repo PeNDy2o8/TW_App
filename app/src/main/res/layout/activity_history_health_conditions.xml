@@ -10,11 +10,11 @@
         android:id="@+id/tv_HistoriclHealthConditions"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/teal_700"
+
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/tv_HistoriclHealthConditons"
         android:textAlignment="center"
-        android:textColor="@color/white"
+
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

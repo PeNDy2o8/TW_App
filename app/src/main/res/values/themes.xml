@@ -1,17 +1,99 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.TWApp" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+
+
+    <style name="Theme" parent="Theme.AppCompat.DayNight">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
+
+        <item name="colorPrimary">@color/teal_700</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorSecondaryVariant">@color/purple_500</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">@color/teal_700</item>
+        <item name="android:buttonStyle">@style/Button</item>
+        <item name="android:textViewStyle">@style/Button</item>
+        <item name="android:actionBarStyle">@style/Button</item>
         <!-- Customize your theme here. -->
 
     </style>
+    <style name="Theme_one" parent="Theme.AppCompat.DayNight">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/p_green</item>
+        <item name="colorPrimaryVariant">@color/p_green_d</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/s_green</item>
+        <item name="colorSecondaryVariant">@color/s_green_d</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:actionBarStyle">@style/ButtonG</item>
+        <item name="android:buttonStyle">@style/ButtonG</item>
+        <item name="android:textViewStyle">@style/ButtonG</item>
+
+        <!-- Customize your theme here. -->
+
+
+    </style>
+    <style name="Theme_two" parent="Theme.AppCompat.DayNight">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/p_pink</item>
+        <item name="colorPrimaryVariant">@color/p_pink_d</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/s_pink</item>
+        <item name="colorSecondaryVariant">@color/s_pink_d</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/p_pink</item>
+        <!-- Customize your theme here. -->
+        <item name="android:buttonStyle">@style/ButtonP</item>
+        <item name="android:textViewStyle">@style/ButtonP</item>
+        <item name="android:actionBarStyle">@style/ButtonP</item>
+    </style>
+    <style name="Theme_three" parent="Theme.AppCompat.DayNight">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/p_blue</item>
+        <item name="colorPrimaryVariant">@color/p_blue_d</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/s_blue</item>
+        <item name="colorSecondaryVariant">@color/s_blue_d</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/p_blue</item>
+        <!-- Customize your theme here. -->
+        <item name="android:buttonStyle">@style/ButtonB</item>
+        <item name="android:textViewStyle">@style/ButtonB</item>
+        <item name="android:actionBarStyle">@style/ButtonB</item>
+    </style>
+    <style name="Button" parent="@android:style/Widget.Holo.Light.Button">
+        <item name="android:background">@color/teal_700</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="bar" parent="@android:style/Widget.Holo.Light.Button">
+        <item name="android:background">@color/teal_700</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="ButtonG" parent="@android:style/Widget.Holo.Light.Button">
+        <item name="android:background">@color/p_pink</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="ButtonP" parent="@android:style/Widget.Holo.Light.Button">
+        <item name="android:background">@color/p_pink</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="ButtonB" parent="@android:style/Widget.Holo.Light.Button">
+        <item name="android:background">@color/p_blue</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>
