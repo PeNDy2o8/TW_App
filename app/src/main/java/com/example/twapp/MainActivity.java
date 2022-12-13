@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_setting;
     private Button btn_RingChange;
     private Button btn_changeicon;
-
+    private Button btn_Theme;
 //    private Button btn_change;
     private Button btn_Notify;
     public static float fontsize = 20;
@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
 //        btn_change = findViewById(R.id.btn_change);
         btn_Notify = findViewById(R.id.btn_Notify);
         btn_setting = findViewById(R.id.btn_setting);
+        btn_Theme = findViewById(R.id.btn_Theme);
         btn_Light.setOnClickListener(new View.OnClickListener(){
             int flag = 0;
             boolean light ;
@@ -94,6 +95,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+        btn_Theme.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Theme.class);
                 startActivity(intent);
             }
         });
