@@ -28,7 +28,7 @@ import okhttp3.Response;
 
 public class HistoryHealthConditions extends AppCompatActivity {
     ListView list_HistoryHealthConditions;
-    OkHttpClient client = new OkHttpClient();
+    OkHttpClient client = OkHttpsSingle.getOkHttp();
     List<String> values = new ArrayList<>();
 
     String tsStr = "";

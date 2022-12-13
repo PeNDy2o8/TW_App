@@ -26,7 +26,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
-    OkHttpClient client = new OkHttpClient();
+    OkHttpClient client = OkHttpsSingle.getOkHttp();
     private GoogleMap mMap;
     private ActivityMapsBinding binding;
     private double longgps,latigps;
