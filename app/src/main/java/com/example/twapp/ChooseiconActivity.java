@@ -21,7 +21,6 @@ import android.widget.TextView;
 import java.util.List;
 
 public class ChooseiconActivity extends AppCompatActivity implements Foregroundback.Listener {
-
     private int position = 0;
 
     @Override
