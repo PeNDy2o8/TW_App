@@ -146,8 +146,8 @@ public class MainActivity extends AppCompatActivity {
         btn_RingChange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this,RingChange.class);
-//                startActivity(intent);
+                Intent intent = new Intent(MainActivity.this,RingChange.class);
+                startActivity(intent);
             }
         });
         btn_changeicon.setOnClickListener(new View.OnClickListener() {
