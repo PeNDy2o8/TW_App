@@ -27,21 +27,21 @@ public class RingChange extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
                 RadioButton r = ( RadioButton)findViewById(checkedId);
-                Ringtone ringtone1=new rington1();
-                Ringtone ringtone2=new rington2();
-                Ringtone ringtone3=new rington3();
+                Ringtone nokia=new Nokia();
+                Ringtone duck=new Duck();
+                Ringtone google=new Google();
                 switch (checkedId) {
                     case R.id.radioButton1:
                         if (r.isChecked())
-                        ringtone1.play();
+                        nokia.play();
                         break;
                     case R.id.radioButton2:
                         if (r.isChecked())
-                        ringtone2.play();
+                        duck.play();
                         break;
                     case R.id.radioButton3:
                         if (r.isChecked())
-                        ringtone3.play();
+                        google.play();
                         break;
                 }
             }
@@ -59,40 +59,37 @@ public class RingChange extends AppCompatActivity {
                     RingtoneManager.getActualDefaultRingtoneUri(RingChange.this,
                             RingtoneManager.TYPE_NOTIFICATION);
         }
-        abstract void setChose();
+        abstract Uri setChose();
+        void setDefault(Uri uri){
+            RingtoneManager.setActualDefaultRingtoneUri(
+                    getApplicationContext(),
+                    RingtoneManager.TYPE_NOTIFICATION,
+                    uri);
+        }
         public final void play(){
             getDefault();
-            setChose();
+            setDefault(setChose());
         }
     }
-    public class rington1 extends Ringtone{
+    public class Nokia extends Ringtone{
         @Override
-        void setChose() {
+        Uri setChose() {
             Uri newUri =Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ring_nokia_x_tune);
-            RingtoneManager.setActualDefaultRingtoneUri(
-                    getApplicationContext(),
-                    RingtoneManager.TYPE_NOTIFICATION,
-                    newUri);
+            return newUri;
         }
     }
-    public class rington2 extends Ringtone{
+    public class Duck extends Ringtone{
         @Override
-        void setChose() {
+        Uri setChose() {
             Uri newUri =Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.notification);
-            RingtoneManager.setActualDefaultRingtoneUri(
-                    getApplicationContext(),
-                    RingtoneManager.TYPE_NOTIFICATION,
-                    newUri);
+            return newUri;
         }
     }
-    public class rington3 extends Ringtone{
+    public class Google extends Ringtone{
         @Override
-        void setChose() {
+        Uri setChose() {
             Uri newUri =Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ring_google_event);
-            RingtoneManager.setActualDefaultRingtoneUri(
-                    getApplicationContext(),
-                    RingtoneManager.TYPE_NOTIFICATION,
-                    newUri);
+            return newUri;
         }
     }
 }
