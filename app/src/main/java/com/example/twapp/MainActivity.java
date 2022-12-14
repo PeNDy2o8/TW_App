@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         btn_Light = findViewById(R.id. btn_Light);
         btn_CurrentLocation = findViewById(R.id.btn_CurrentLocation);
         btn_RingChange = findViewById(R.id.btn_RingChange);
+        btn_Notify = findViewById(R.id.btn_Notify);
+
 
         btn_setting.setTextSize(fontsize);
         btn_HealthConditions.setTextSize(fontsize);
@@ -48,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
         btn_Light.setTextSize(fontsize);
         btn_CurrentLocation.setTextSize(fontsize);
         btn_RingChange.setTextSize(fontsize);
+        btn_Notify.setTextSize(fontsize);
+
     }
 
     @Override
@@ -158,28 +162,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         );
-        btn_Notify.setOnClickListener(new View.OnClickListener() {
+        btn_Notify.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Notify.class);
-                btn_setting.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(MainActivity.this, FontSize.class);
-                        startActivity(intent);
-                    }
-                });
-
-//        btn_RingChange.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this,RingChange.class);
-//                startActivity(intent);
-//            }
-//        });
-//            }
-        }
+                Intent intent = new Intent(MainActivity.this,Notify.class);
+                startActivity(intent);
+            }
         });
     }
 }
