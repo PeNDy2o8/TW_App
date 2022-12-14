@@ -57,6 +57,9 @@
             android:value="AIzaSyCLJkTj9SezcIJXVnRieHwBn2mVCLSqBFw" />
         <activity android:name=".Notify"
             android:exported="false" />
+        <activity android:name=".Observer.NotifyObserver"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <receiver android:name=".testReceiver"
             android:exported="false">
             <intent-filter>
@@ -90,7 +93,9 @@
         <!--        以下icon-->
 
 
-
+        <activity
+            android:name=".RingChange"
+            android:exported="false" />
         <activity-alias
             android:name=".Defaulticon"
             android:enabled="true"
