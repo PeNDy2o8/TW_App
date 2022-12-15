@@ -24,6 +24,7 @@
     <string name="Password">Password</string>
     <string name="Account">Account</string>
     <string name="Log_In">Log In</string>
+    <string name="createAccount"><u>createAccount</u></string>
 
 
 </resources>

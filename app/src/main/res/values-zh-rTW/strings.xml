@@ -24,7 +24,7 @@
     <string name="Password">密碼</string>
     <string name="Account">帳號</string>
     <string name="Log_In">登入</string>
-
+    <string name="createAccount">createAccount</string>
 
 
 </resources>

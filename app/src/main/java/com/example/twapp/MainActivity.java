@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_RingChange;
     private Button btn_changeicon;
     private Button btn_Theme;
+    private  Button btn_LogIn;
 //    private Button btn_change;
     private Button btn_Notify;
     DrawerLayout drawerLayout;
@@ -99,12 +100,13 @@ public class MainActivity extends AppCompatActivity {
         btn_Theme = findViewById(R.id.btn_Theme);
 
         //側拉相關按鈕
-        Button btn_LogIn=findViewById(R.id.btn_login);
+        btn_LogIn=findViewById(R.id.btn_login);
         btn_LogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent =new Intent(MainActivity.this,Logins.class);
                 startActivity(intent);
+
             }
         });
         btn_Light.setOnClickListener(new View.OnClickListener(){
