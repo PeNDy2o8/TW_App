@@ -21,5 +21,10 @@
     <string name="tv_LastTime">上一筆紀錄</string>
     <string name="tv_Date"> </string>
     <string name="tv_AbnormalRecordTitle">異常紀錄</string>
+    <string name="Password">密碼</string>
+    <string name="Account">帳號</string>
+    <string name="Log_In">登入</string>
+
+
 
 </resources>

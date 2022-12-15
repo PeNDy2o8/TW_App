@@ -21,4 +21,9 @@
     <string name="tv_LastTime">Last Time</string>
     <string name="tv_Date"> </string>
     <string name="tv_AbnormalRecordTitle">Abnormal Record</string>
+    <string name="Password">Password</string>
+    <string name="Account">Account</string>
+    <string name="Log_In">Log In</string>
+
+
 </resources>

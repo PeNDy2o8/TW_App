@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Logins">
+    <TextView
+        android:id="@+id/log_In_account"
+        android:layout_width="89dp"
+        android:layout_height="59dp"
+        android:background="#73FFFFFF"
+        android:text="@string/Account"
+        android:textColor="@color/black"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="306dp" />
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/Log_In"
+        android:textAlignment="center"
+
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095" />
+
+    <TextView
+        android:id="@+id/Log_In_password"
+        android:layout_width="89dp"
+        android:layout_height="59dp"
+        android:background="#73FFFFFF"
+        android:text="@string/Password"
+        android:textColor="@color/black"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="365dp" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="88dp"
+        android:layout_height="60dp"
+        android:text="@string/Log_In"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="458dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/accountInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/Account"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        tools:ignore="LabelFor,MissingConstraints"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="313dp" />
+
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/Password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="379dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
