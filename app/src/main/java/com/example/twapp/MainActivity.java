@@ -2,9 +2,13 @@ package com.example.twapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
 import android.util.Log;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 
@@ -26,8 +30,10 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_RingChange;
     private Button btn_changeicon;
     private Button btn_Theme;
+    private  Button btn_LogIn;
 //    private Button btn_change;
     private Button btn_Notify;
+    DrawerLayout drawerLayout;
     public static float fontsize = 20;
     public void onResume(){
         super.onResume();
@@ -42,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         btn_Notify = findViewById(R.id.btn_Notify);
 
 
+
         btn_setting.setTextSize(fontsize);
         btn_HealthConditions.setTextSize(fontsize);
         btn_AbnormalRecord.setTextSize(fontsize);
@@ -52,6 +59,19 @@ public class MainActivity extends AppCompatActivity {
         btn_RingChange.setTextSize(fontsize);
         btn_Notify.setTextSize(fontsize);
 
+
+    }
+
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                drawerLayout.closeDrawers();
+            }else finish();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
     @Override
@@ -67,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "onComplete: "+token);
             }
         });
+        drawerLayout=findViewById(R.id.drawer_layout);
 
         btn_CurrentLocation = findViewById(R.id.btn_CurrentLocation);
         btn_HistoryLocation = findViewById(R.id.btn_HistoryLocation);
@@ -80,6 +101,17 @@ public class MainActivity extends AppCompatActivity {
         btn_Notify = findViewById(R.id.btn_Notify);
         btn_setting = findViewById(R.id.btn_setting);
         btn_Theme = findViewById(R.id.btn_Theme);
+
+        //側拉相關按鈕
+        btn_LogIn=findViewById(R.id.btn_login);
+        btn_LogIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(MainActivity.this,Logins.class);
+                startActivity(intent);
+
+            }
+        });
         btn_Light.setOnClickListener(new View.OnClickListener(){
             int flag = 0;
             boolean light ;
@@ -170,5 +202,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 }
