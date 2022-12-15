@@ -25,17 +25,17 @@ public class NotifyObserver implements Observer {
     Context context;
     Notification.Builder builder;
 
-
     private NotifySubject notifySubject; // 持有指向 ConcreteSubject 物件的 reference
 
 
     public NotifyObserver(NotifySubject concreteSubject) {
         this.notifySubject = concreteSubject;
-
     }
+
     public void setcontext(Context context){
         this.context = context;
     }
+
     public void setNotificationManager(NotificationManager notificationManager){
         this.notificationManager = notificationManager;
     }
