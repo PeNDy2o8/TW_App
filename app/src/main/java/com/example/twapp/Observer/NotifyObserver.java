@@ -7,17 +7,10 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
-import android.os.Bundle;
-import android.widget.Button;
 
 import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.twapp.Notify;
 import com.example.twapp.R;
-import com.example.twapp.testReceiver;
-
-import java.nio.channels.Channel;
 
 public class NotifyObserver implements Observer {
     NotificationManager notificationManager;

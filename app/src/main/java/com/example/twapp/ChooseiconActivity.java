@@ -105,7 +105,7 @@ public class ChooseiconActivity extends AppCompatActivity implements Foregroundb
     }
 
     public ComponentName componentName1() {
-        return new ComponentName(this, "com.example.twapp.Defaulticon");
+        return new ComponentName(this, "com.example.twapp.Myappicon");
     }
     public ComponentName componentName2() {
         return new ComponentName(this, "com.example.twapp.W1");
