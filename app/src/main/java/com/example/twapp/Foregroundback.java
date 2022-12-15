@@ -21,7 +21,9 @@ public class Foregroundback implements Application.ActivityLifecycleCallbacks {
 
     private static Foregroundback instance;
     private boolean foreground = false, paused = true;
+
     private Handler handler = new Handler();
+
     private List<Listener> listeners = new CopyOnWriteArrayList<Listener>();
     private Runnable check;
 

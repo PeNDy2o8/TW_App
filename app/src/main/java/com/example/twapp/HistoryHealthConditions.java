@@ -48,7 +48,9 @@ public class HistoryHealthConditions extends AppCompatActivity {
         setContentView(R.layout.activity_history_health_conditions);
         list_HistoryHealthConditions = (ListView) findViewById(R.id.list_HistoryHealthConditions);
         ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, values);
+
         list_HistoryHealthConditions.setAdapter(adapter);
+
         sdf.setTimeZone(TimeZone.getTimeZone("GMT+8"));
 
         class getHistoryHealthConditionsTask extends AsyncTask<Void, Void, Void> {

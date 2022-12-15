@@ -23,7 +23,6 @@
         android:screenOrientation="portrait">
 
 
-
         <service
             android:name=".FCMService"
             android:enabled="true"
@@ -55,17 +54,21 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCLJkTj9SezcIJXVnRieHwBn2mVCLSqBFw" />
+
         <activity android:name=".Notify"
             android:exported="false" />
+
         <activity android:name=".Observer.NotifyObserver"
             android:exported="false"
             tools:ignore="Instantiatable" />
+
         <receiver android:name=".testReceiver"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"></action>
             </intent-filter>
         </receiver>
+
         <activity
             android:name=".MapsActivity"
             android:exported="false"
@@ -90,30 +93,34 @@
             android:name="ChooseiconActivity"
             android:exported="true"/>
 
-        <!--        以下icon-->
-
-
         <activity
             android:name=".RingChange"
             android:exported="false" />
+        <activity
+            android:name=".FontSize"
+            android:exported="false" />
+
+        <activity android:name=".MainActivity"/>
+
+
+        <!--        以下icon-->
+
         <activity-alias
             android:name=".Defaulticon"
             android:enabled="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
+            android:exported="true"
             android:targetActivity=".MainActivity">
-        </activity-alias>
-        <activity
-            android:name=".FontSize"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity-alias>
+
+
+
+
 
 
         <activity-alias
