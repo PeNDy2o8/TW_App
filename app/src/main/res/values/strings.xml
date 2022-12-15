@@ -25,6 +25,10 @@
     <string name="Account">Account</string>
     <string name="Log_In">Log In</string>
     <string name="createAccount"><u>createAccount</u></string>
+    <string name="Name">Name</string>
+    <string name="Telephone">Telephone</string>
+    <string name="Create_Account">Create Account</string>
+    <string name="create">Create</string>
 
 
 </resources>

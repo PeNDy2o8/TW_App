@@ -25,6 +25,10 @@
     <string name="Account">帳號</string>
     <string name="Log_In">登入</string>
     <string name="createAccount">createAccount</string>
+    <string name="Name">Name</string>
+    <string name="Telephone">Telephone</string>
+    <string name="Create_Account">Create Account</string>
+    <string name="create">Create</string>
 
 
 </resources>
