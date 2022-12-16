@@ -7,6 +7,14 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.twapp.BaseActivity.AbnormalRecord;
+import com.example.twapp.BaseActivity.ElectroCardioGraphy;
+import com.example.twapp.BaseActivity.HealthConditions;
+import com.example.twapp.BaseActivity.HistoryHealthConditions;
+import com.example.twapp.BaseActivity.HistoryLocation;
+import com.example.twapp.MainActivity;
+import com.example.twapp.R;
+
 public class FontSize  extends AppCompatActivity{
 
     TextView tD;

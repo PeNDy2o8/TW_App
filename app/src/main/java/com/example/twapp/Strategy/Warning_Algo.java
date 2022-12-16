@@ -1,9 +1,8 @@
-package com.example.twapp;
+package com.example.twapp.Strategy;
 
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 

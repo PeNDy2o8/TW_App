@@ -6,12 +6,10 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.util.Log;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.example.twapp.Command.AbnormalRecord_command;
 import com.example.twapp.Command.Changeicon_command;
@@ -28,9 +26,11 @@ import com.example.twapp.Command.Receiver;
 import com.example.twapp.Command.RingChange_command;
 import com.example.twapp.Command.Setting_command;
 import com.example.twapp.Command.Theme_command;
+import com.example.twapp.ChangeIcon.Myappicon;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
+
 
 
 

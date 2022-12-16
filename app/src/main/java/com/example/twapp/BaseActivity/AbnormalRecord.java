@@ -1,4 +1,4 @@
-package com.example.twapp;
+package com.example.twapp.BaseActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.example.twapp.OkHttpsSingle;
+import com.example.twapp.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -28,52 +31,52 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 
-public class HistoryHealthConditions extends AppCompatActivity {
-    ListView list_HistoryHealthConditions;
+    public class AbnormalRecord extends AppCompatActivity {
+    ListView list_Abnormal;
     OkHttpClient client = OkHttpsSingle.getOkHttp();
     List<String> values = new ArrayList<>();
+
     String tsStr = "";
     DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-    private TextView tv_HistoriclHealthConditions;
+    private TextView tv_AbnormalRecordTitle;
     public static float fontsize = 20;
     public void onResume(){
         super.onResume();
-        tv_HistoriclHealthConditions = findViewById(R.id.tv_HistoriclHealthConditions);
+        tv_AbnormalRecordTitle = findViewById(R.id.tv_AbnormalRecordTitle);
 
-        tv_HistoriclHealthConditions.setTextSize(fontsize);
+        tv_AbnormalRecordTitle.setTextSize(fontsize);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_history_health_conditions);
-        list_HistoryHealthConditions = (ListView) findViewById(R.id.list_HistoryHealthConditions);
+        setContentView(R.layout.activity_abnormal_record);
+        list_Abnormal = (ListView) findViewById(R.id.list_Abnormal);
         ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, values);
-
-        list_HistoryHealthConditions.setAdapter(adapter);
-
+        list_Abnormal.setAdapter(adapter);
         sdf.setTimeZone(TimeZone.getTimeZone("GMT+8"));
 
-        class getHistoryHealthConditionsTask extends AsyncTask<Void, Void, Void> {
+        class getAbnormalRecordTask extends AsyncTask<Void, Void, Void> {
             @Override
             protected Void doInBackground(Void... Void) {
                 Request request = new Request.Builder()
                         .url("https://g8.minouo.eu.org/Condition/get/4")
                         .build();
 
+
                 try (Response response = client.newCall(request).execute()) {
                     if (response.code() == 200) {
                         JSONArray jsonArray = new JSONArray(response.body().string());
                         for (int i = 0; i < jsonArray.length(); i++) {
                             JSONObject j =  jsonArray.getJSONObject(i);
-                            Timestamp ts = new Timestamp(j.getLong("time_stamp"));
-                            tsStr = sdf.format(ts);
-                            values.add(String.format("Hearth Rhythm：%s     blood oxygen：%s \nElder State：%s\n%s",
-                                    j.getString("heartrhythm"),
-                                    j.getString("bloodyoxy"),
-                                    j.getString("elder_state"),
-                                    tsStr
-                            ));
-
+                            if (j.getString("elder_state").equals("abnormal")){
+                                Timestamp ts = new Timestamp(j.getLong("time_stamp"));
+                                tsStr = sdf.format(ts);
+                                values.add(String.format("Heart Rhythm：%s    Blood Oxygen：%s  \n%s",
+                                        j.getString("heartrhythm"),
+                                        j.getString("bloodyoxy"),
+                                        tsStr
+                                ));
+                            }
                         }
                     }
 
@@ -88,7 +91,7 @@ public class HistoryHealthConditions extends AppCompatActivity {
                 ((ArrayAdapter<?>) adapter).notifyDataSetChanged();
             }
         }
-        new getHistoryHealthConditionsTask().execute();
+        new getAbnormalRecordTask().execute();
 
     }
 }

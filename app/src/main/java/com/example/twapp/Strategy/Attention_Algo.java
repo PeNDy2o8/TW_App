@@ -1,21 +1,12 @@
-package com.example.twapp;
+package com.example.twapp.Strategy;
 
-import static java.lang.Boolean.*;
-
-import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.graphics.drawable.Drawable;
-import android.view.View;
-import android.view.LayoutInflater;
 import android.widget.Button;
-import android.widget.ListView;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
 import android.widget.TextView;
 
 public class Attention_Algo implements Algorithms {

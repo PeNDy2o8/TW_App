@@ -1,4 +1,4 @@
-package com.example.twapp;
+package com.example.twapp.BaseActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.example.twapp.OkHttpsSingle;
+import com.example.twapp.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;

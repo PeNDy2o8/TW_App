@@ -1,10 +1,12 @@
-package com.example.twapp;
+package com.example.twapp.Template;
 
 import android.os.Bundle;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.twapp.R;
 
 public class RingChange extends AppCompatActivity {
 

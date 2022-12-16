@@ -1,6 +1,6 @@
 package com.example.twapp.Command;
 
-import com.example.twapp.Theme;
+import com.example.twapp.Theme.Theme;
 
 public class Theme_command extends Command{
     public Theme_command(Receiver receiver){

@@ -1,20 +1,15 @@
-package com.example.twapp;
+package com.example.twapp.Theme;
 
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.messaging.FirebaseMessaging;
+
+import com.example.twapp.R;
 
 public class Theme extends AppCompatActivity{
 

@@ -1,4 +1,4 @@
-package com.example.twapp;
+package com.example.twapp.BaseActivity;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,28 +6,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ListAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
+
+import com.example.twapp.Strategy.Alert_Context;
+import com.example.twapp.OkHttpsSingle;
+import com.example.twapp.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.IOException;
-import java.security.acl.LastOwnerException;
-import java.sql.Array;
 import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.TimeZone;
 
-import kotlin.contracts.Returns;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;

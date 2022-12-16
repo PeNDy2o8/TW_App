@@ -1,4 +1,4 @@
-package com.example.twapp;
+package com.example.twapp.Login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,12 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.twapp.Login.MyAPIService;
-import com.example.twapp.Login.RetrofitManager;
-import com.example.twapp.Login.UserData;
-
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.example.twapp.R;
 
 import retrofit2.Call;
 import retrofit2.Callback;

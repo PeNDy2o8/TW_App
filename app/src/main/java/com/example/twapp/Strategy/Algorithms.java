@@ -1,4 +1,4 @@
-package com.example.twapp;
+package com.example.twapp.Strategy;
 
 import android.widget.TextView;
 

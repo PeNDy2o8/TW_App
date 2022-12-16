@@ -1,24 +1,12 @@
-package com.example.twapp;
-import androidx.annotation.Nullable;
+package com.example.twapp.ChangeIcon;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
-import android.app.ActivityManager;
 import android.content.ComponentName;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.os.Bundle;
-import android.os.PatternMatcher;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.Switch;
-import android.widget.TextView;
 
-import java.util.List;
+import com.example.twapp.R;
 
 public class ChooseiconActivity extends AppCompatActivity implements Foregroundback.Listener {
     private int position = 0;
@@ -105,7 +93,7 @@ public class ChooseiconActivity extends AppCompatActivity implements Foregroundb
     }
 
     public ComponentName componentName1() {
-        return new ComponentName(this, "com.example.twapp.Myappicon");
+        return new ComponentName(this, "com.example.twapp.ChangeIcon.Myappicon");
     }
     public ComponentName componentName2() {
         return new ComponentName(this, "com.example.twapp.W1");

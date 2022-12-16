@@ -1,7 +1,9 @@
-package com.example.twapp;
+package com.example.twapp.Template;
 
 import android.content.Context;
 import android.net.Uri;
+
+import com.example.twapp.R;
 
 public class Google extends Ringtone {
 

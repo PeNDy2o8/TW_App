@@ -1,4 +1,4 @@
-package com.example.twapp;
+package com.example.twapp.BaseActivity;
 
 import androidx.fragment.app.FragmentActivity;
 
@@ -6,6 +6,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 
+import com.example.twapp.OkHttpsSingle;
+import com.example.twapp.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;

@@ -1,10 +1,12 @@
-package com.example.twapp;
+package com.example.twapp.BaseActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.twapp.R;
 
 public class ElectroCardioGraphy extends AppCompatActivity {
     private TextView textView25,textView24,textView21,textView22,textView16,textView14,textView15,textView5,textView6,textView18,textView19,textView20,textView23;

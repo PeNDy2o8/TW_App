@@ -10,7 +10,7 @@
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
     <application
 
-        android:name=".Myappicon"
+        android:name=".ChangeIcon.Myappicon"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -23,14 +23,14 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".CreateAcount"
+            android:name=".Login.CreateAcount"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Logins"
+            android:name=".Login.Logins"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -57,10 +57,10 @@
              "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
         -->
         <activity
-            android:name=".ElectroCardioGraphy"
+            android:name=".BaseActivity.ElectroCardioGraphy"
             android:exported="false" />
         <activity
-            android:name=".AbnormalRecord"
+            android:name=".BaseActivity.AbnormalRecord"
             android:exported="false" />
 
         <meta-data
@@ -75,27 +75,27 @@
             tools:ignore="Instantiatable" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name=".BaseActivity.MapsActivity"
             android:exported="false"
             android:label="@string/title_activity_maps" />
         <activity
-            android:name=".Theme"
+            android:name=".Theme.Theme"
             android:exported="false" />
         <activity
-            android:name=".HistoryHealthConditions"
+            android:name=".BaseActivity.HistoryHealthConditions"
             android:exported="false" />
         <activity
-            android:name=".HealthConditions"
+            android:name=".BaseActivity.HealthConditions"
             android:exported="false" />
         <activity
-            android:name=".HistoryLocation"
+            android:name=".BaseActivity.HistoryLocation"
             android:exported="false" />
         <activity
-            android:name="ChooseiconActivity"
+            android:name=".ChangeIcon.ChooseiconActivity"
             android:exported="true"/>
 
         <activity
-            android:name=".RingChange"
+            android:name=".Template.RingChange"
             android:exported="false" />
         <activity
             android:name=".FontSize"
