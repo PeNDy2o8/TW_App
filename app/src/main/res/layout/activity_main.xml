@@ -244,18 +244,6 @@
             android:textColor="@color/white"
             android:textSize="24sp" />
 
-        <Button
-            android:id="@+id/button3"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="-150dp"
-            android:layout_marginTop="80dp"
-            android:background="@drawable/shape_capsule"
-            android:text="ChangeIcon"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="24sp" />
 
         <Button
             android:id="@+id/logout"
@@ -265,9 +253,10 @@
             android:layout_marginStart="-150dp"
             android:layout_marginTop="700dp"
             android:background="@drawable/shape_capsule"
-            android:text="logout"
+            android:text="@string/Logout"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="24sp" />
+
     </LinearLayout>
 </androidx.drawerlayout.widget.DrawerLayout>

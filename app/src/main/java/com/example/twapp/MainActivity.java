@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -20,6 +21,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = FCMService.TAG;
+
     private Button btn_CurrentLocation;
     private Button btn_HistoryLocation;
     private Button btn_HealthConditions;
@@ -76,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Myappicon gv=(Myappicon)getApplicationContext();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         FirebaseMessaging.getInstance().subscribeToTopic("news");
@@ -101,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
         btn_Notify = findViewById(R.id.btn_Notify);
         btn_setting = findViewById(R.id.btn_setting);
         btn_Theme = findViewById(R.id.btn_Theme);
+
 
         //側拉相關按鈕
         btn_LogIn=findViewById(R.id.btn_login);
