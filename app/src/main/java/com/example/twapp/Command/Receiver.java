@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 
 public class Receiver {
-    Context context;
+    protected Context context;
     public Receiver(Context context){
         this.context = context;
     }
