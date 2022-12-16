@@ -9,6 +9,7 @@
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
     <application
+
         android:name=".Myappicon"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"

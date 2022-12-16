@@ -29,6 +29,7 @@
     <string name="Telephone">Telephone</string>
     <string name="Create_Account">Create Account</string>
     <string name="create">Create</string>
+    <string name="Logout">Logout</string>
 
 
 </resources>
