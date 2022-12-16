@@ -1,5 +1,6 @@
 package com.example.twapp;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.AsyncTask;
@@ -41,6 +42,7 @@ public class HealthConditions extends AppCompatActivity {
     private TextView tv_State = null;
     private TextView tv_Date = null;
     private TextView tv_LastHeartRhythm = null;
+    private Alert_Context ac = new Alert_Context();
     String tsSt = "";
     DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 
@@ -86,6 +88,7 @@ public class HealthConditions extends AppCompatActivity {
         tv_LastHeartRhythm = findViewById(R.id.tv_LastHeartRhythm);
         handler = new Handler();
         sdf.setTimeZone(TimeZone.getTimeZone("GMT+8"));
+        AlertDialog.Builder dialog = new AlertDialog.Builder(HealthConditions.this);
 
 
         new Thread(new Runnable() {
@@ -124,6 +127,8 @@ public class HealthConditions extends AppCompatActivity {
                                 tv_State.setText(State);
                                 tv_Date.setText(tsSt);
                                 tv_LastHeartRhythm.setText(LHR);
+                                ac.setAlgorithm("120");
+                                ac.setAlarm(tv_HeartRhythm,dialog);
                         }
                     }
                     new HRget().execute();
