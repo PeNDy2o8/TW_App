@@ -14,4 +14,8 @@ import retrofit2.http.Path;
 public interface MyAPIService {
     @GET("Guardian/verify/{account}/{password}")
     Call<UserData> getAlbumsByVerify(@Path("account")String account,@Path("password")String password);
+
+    @POST("/Guardian/create")
+    Call<UserData>createUser(@Body UserData userData);
+
 }

@@ -149,7 +149,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/create_AccountButton"
         android:layout_width="120dp"
         android:layout_height="48dp"
         android:text="@string/create"
