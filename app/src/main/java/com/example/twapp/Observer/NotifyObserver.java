@@ -43,16 +43,14 @@ public class NotifyObserver implements Observer {
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void update() {
-        Intent intent = new Intent(context,testReceiver.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(context,1,intent,PendingIntent.FLAG_UPDATE_CURRENT);
+
 
         Notification.Builder builder = new Notification.Builder(context);
         builder.setSmallIcon(R.mipmap.ic_launcher)
                 .setContentTitle("訊息")
                 .setContentText("跌倒啦~")
-                .setChannelId("ID")
-                .addAction(R.drawable.ic_launcher_background,"顯示訊息",pendingIntent);
+                .setChannelId("ID");
+
 
         Notification notification=builder.build();
         notificationManager.notify(1,notification);
