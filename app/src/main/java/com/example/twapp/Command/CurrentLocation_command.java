@@ -1,5 +1,6 @@
 package com.example.twapp.Command;
 
+import com.example.twapp.BaseActivity.MapsActivity;
 import com.example.twapp.MainActivity;
 
 public class CurrentLocation_command extends Command{
@@ -7,7 +8,6 @@ public class CurrentLocation_command extends Command{
         super(receiver);
     }
     @Override
-    public void execute() {
-        receiver.action(MainActivity.class);
+    public void execute() {receiver.action(MapsActivity.class);
     }
 }
