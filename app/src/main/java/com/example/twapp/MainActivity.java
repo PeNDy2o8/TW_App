@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.twapp.Command.AbnormalRecord_command;
 import com.example.twapp.Command.Changeicon_command;
@@ -27,6 +29,7 @@ import com.example.twapp.Command.RingChange_command;
 import com.example.twapp.Command.Setting_command;
 import com.example.twapp.Command.Theme_command;
 import com.example.twapp.ChangeIcon.Myappicon;
+import com.example.twapp.Observer.Observer;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
@@ -34,7 +37,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements Observer {
     public static final String TAG = FCMService.TAG;
 
     private Button btn_CurrentLocation;
@@ -51,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
 //    private Button btn_change;
     private Button btn_Notify;
     DrawerLayout drawerLayout;
+    TextView username;
+    Myappicon gv;
     public static float fontsize = 20;
     public void onResume(){
         super.onResume();
@@ -110,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
 
         Invoker invoker = new Invoker();
 
-        Myappicon gv=(Myappicon)getApplicationContext();
+         gv=(Myappicon)getApplicationContext();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         FirebaseMessaging.getInstance().subscribeToTopic("news");
@@ -135,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
         btn_Notify = findViewById(R.id.btn_Notify);
         btn_setting = findViewById(R.id.btn_setting);
         btn_Theme = findViewById(R.id.btn_Theme);
+        username=findViewById(R.id.user_name);
 
 
         //側拉相關按鈕
@@ -246,5 +252,12 @@ public class MainActivity extends AppCompatActivity {
                 invoker.executeCommand();
             }
         });
+        gv.attach(this);
+    }
+
+    @Override
+    public void update() {
+        username.setText(gv.getName());
+        Toast.makeText(MainActivity.this,"welcome! "+username.getText(),Toast.LENGTH_LONG).show();
     }
 }

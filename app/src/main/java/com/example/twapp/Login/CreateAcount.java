@@ -31,9 +31,16 @@ public class CreateAcount extends AppCompatActivity {
         btn_create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(password.getText().length()<5||password.getText().length()>13|| !password.getText().toString().matches("[a-zA-Z0-9|\\\\.]*")){
+                if(password.getText().length()<5){
+                    Toast.makeText(CreateAcount.this,"Password length has less than 5 characters Please check the input",Toast.LENGTH_LONG).show();
+                }else if(password.getText().length()>13){
+                    Toast.makeText(CreateAcount.this,"Password length has more than 13 characters Please check the input",Toast.LENGTH_LONG).show();
+
+                }else if( !password.getText().toString().matches("[a-zA-Z0-9|\\\\.]*")){
                     Toast.makeText(CreateAcount.this,"Password has Error Format Please check the input",Toast.LENGTH_LONG).show();
-                }else{
+
+                }
+                else{
                     UserData userData=new UserData(account.getText().toString(),password.getText().toString(),name.getText().toString(),telephone.getText().toString());
                     Call<UserData> call=myAPIService.createUser(userData);
                     call.enqueue(new Callback<UserData>() {
