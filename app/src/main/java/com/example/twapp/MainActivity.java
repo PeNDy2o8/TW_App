@@ -32,6 +32,9 @@ import com.example.twapp.Command.Setting_command;
 import com.example.twapp.Command.Theme_command;
 import com.example.twapp.ChangeIcon.Myappicon;
 import com.example.twapp.Observer.Observer;
+import com.example.twapp.Visitor.LoggedIn;
+import com.example.twapp.Visitor.NotLoggedIn;
+import com.example.twapp.Visitor.Visitor;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
@@ -118,7 +121,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
 
         Invoker invoker = new Invoker();
 
-         gv=(Myappicon)getApplicationContext();
+        gv=(Myappicon)getApplicationContext();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         FirebaseMessaging.getInstance().subscribeToTopic("news");
