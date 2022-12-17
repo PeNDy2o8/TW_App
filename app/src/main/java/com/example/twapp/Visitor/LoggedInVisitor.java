@@ -2,6 +2,7 @@ package com.example.twapp.Visitor;
 
 import com.example.twapp.Command.AbnormalRecord_command;
 import com.example.twapp.Command.Changeicon_command;
+import com.example.twapp.Command.Command;
 import com.example.twapp.Command.CurrentLocation_command;
 import com.example.twapp.Command.HealthConditions_command;
 import com.example.twapp.Command.HistoryHealthConditions_command;
@@ -14,77 +15,68 @@ import com.example.twapp.Command.RingChange_command;
 import com.example.twapp.Command.Setting_command;
 import com.example.twapp.Command.Theme_command;
 
-public class NotLoggedIn extends Invoker implements Visitor{
-    Login_command login;
+import java.util.ArrayList;
+import java.util.List;
+
+public class LoggedInVisitor implements Visitor{
+
     @Override
     public void visit(AbnormalRecord_command abnormalRecord) {
-        System.out.println("Please login first");
-        login.execute();
+        abnormalRecord.execute();
     }
 
     @Override
     public void visit(Changeicon_command changeicon) {
-        System.out.println("Please login first");
-        login.execute();
+        changeicon.execute();
     }
 
     @Override
     public void visit(CurrentLocation_command currentLocation) {
-        System.out.println("Please login first");
-        login.execute();
+        currentLocation. execute();
     }
 
     @Override
     public void visit(HealthConditions_command healthCondition) {
-        System.out.println("Please login first");
-        login.execute();
+        healthCondition.execute();
     }
 
     @Override
     public void visit(HistoryHealthConditions_command historyHealthConditions) {
-        System.out.println("Please login first");
-        login.execute();
+        historyHealthConditions.execute();
     }
 
     @Override
     public void visit(HistoryLocation_command historyLocation) {
-        System.out.println("Please login first");
-        login.execute();
+        historyLocation.execute();
     }
 
     @Override
     public void visit(Light_sw_command lightSwitch) {
-        System.out.println("Please login first");
-        login.execute();
+        lightSwitch.execute();
     }
 
     @Override
     public void visit(Login_command login) {
-        System.out.println("Please login first");
         login.execute();
     }
 
     @Override
     public void visit(Notify_command notify) {
-        System.out.println("Please login first");
-        login.execute();
+        notify.execute();
     }
 
     @Override
     public void visit(RingChange_command ringChange) {
-        System.out.println("Please login first");
-        login.execute();
+        ringChange.execute();
     }
 
     @Override
     public void visit(Setting_command setting) {
-        System.out.println("Please login first");
-        login.execute();
+        setting.execute();
     }
 
     @Override
     public void visit(Theme_command theme) {
-        System.out.println("Please login first");
-        login.execute();
+        theme.execute();
     }
 }

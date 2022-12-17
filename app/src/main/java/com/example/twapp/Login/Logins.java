@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.twapp.ChangeIcon.Myappicon;
 import com.example.twapp.MainActivity;
 import com.example.twapp.R;
+import com.example.twapp.UserInfo;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -55,6 +56,9 @@ public class Logins extends AppCompatActivity {
                            gv.setName(response.body().getName());
                            gv.setAccount(response.body().getAccount());
                            gv.setTelephone(response.body().getTelephone());
+                           UserInfo.setName(response.body().getName());
+                           UserInfo.setAccount(response.body().getAccount());
+                           UserInfo.setTelephone(response.body().getTelephone());
                            Intent intent=new Intent(Logins.this, MainActivity.class);
                            startActivity(intent);
                        }else {
