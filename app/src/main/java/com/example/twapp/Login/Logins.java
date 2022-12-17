@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.twapp.ChangeIcon.Myappicon;
+import com.example.twapp.MainActivity;
 import com.example.twapp.R;
 
 import retrofit2.Call;
@@ -53,7 +55,8 @@ public class Logins extends AppCompatActivity {
                            gv.setName(response.body().getName());
                            gv.setAccount(response.body().getAccount());
                            gv.setTelephone(response.body().getTelephone());
-                           Toast.makeText(Logins.this,gv.getAccount(),Toast.LENGTH_LONG).show();
+                           Intent intent=new Intent(Logins.this, MainActivity.class);
+                           startActivity(intent);
                        }else {
                            Toast.makeText(Logins.this,"Error account Please check your account or password",Toast.LENGTH_LONG).show();
 

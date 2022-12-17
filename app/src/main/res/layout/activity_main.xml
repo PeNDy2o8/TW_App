@@ -15,7 +15,19 @@
     >
 
 
-
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="48dp"
+            android:layout_height="36dp"
+            android:background="#73FFFFFF"
+            android:text="user"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.964"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
     <Button
         android:id="@+id/btn_changeicon"
         android:layout_width="300dp"
