@@ -30,6 +30,8 @@
     <string name="Create_Account">Create Account</string>
     <string name="create">Create</string>
     <string name="Logout">Logout</string>
+    <string name="drawer_open">Drawer opened</string>
+    <string name="drawer_close">Drawer closed</string>
 
 
 </resources>

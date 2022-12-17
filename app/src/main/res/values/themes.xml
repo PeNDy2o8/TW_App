@@ -20,6 +20,8 @@
         <!-- Customize your theme here. -->
 
     </style>
+
+
     <style name="Theme_one" parent="Theme.AppCompat.DayNight">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/p_green</item>

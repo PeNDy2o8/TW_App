@@ -1,7 +1,9 @@
 package com.example.twapp;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -56,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
     DrawerLayout drawerLayout;
     TextView username;
     Myappicon gv;
+    Toolbar toolbar;
     public static float fontsize = 20;
     public void onResume(){
         super.onResume();
