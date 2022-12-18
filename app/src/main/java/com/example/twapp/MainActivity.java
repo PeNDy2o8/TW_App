@@ -45,6 +45,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 public class MainActivity extends AppCompatActivity implements Observer {
     static String name;
     public static final String TAG = FCMService.TAG;
+
     private Button btn_CurrentLocation;
     private Button btn_HistoryLocation;
     private Button btn_HealthConditions;
