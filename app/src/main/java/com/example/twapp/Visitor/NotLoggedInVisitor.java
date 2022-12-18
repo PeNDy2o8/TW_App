@@ -19,7 +19,7 @@ public class NotLoggedInVisitor implements Visitor{
     public NotLoggedInVisitor(Receiver receiver){
         login=new Login_command(receiver);
     }
-    Login_command login ;
+    private Login_command login ;
     @Override
     public void visit(AbnormalRecord_command abnormalRecord) {
         System.out.println("Please login first");
