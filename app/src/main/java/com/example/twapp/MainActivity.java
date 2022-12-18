@@ -41,7 +41,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 
 public class MainActivity extends AppCompatActivity implements Observer {
     public static final String TAG = FCMService.TAG;
-
+    static String name;
     private Button btn_CurrentLocation;
     private Button btn_HistoryLocation;
     private Button btn_HealthConditions;
@@ -256,10 +256,16 @@ public class MainActivity extends AppCompatActivity implements Observer {
             }
         });
         gv.attach(this);
+        username=findViewById(R.id.user_name);
+        username.setText(name);
     }
 
     @Override
     public void update() {
+        name=gv.getName();
+        username=findViewById(R.id.user_name);
+        username.setText(name);
+        username.setTextSize(12);
         username.setText(gv.getName());
         Toast.makeText(MainActivity.this,"welcome! "+username.getText(),Toast.LENGTH_LONG).show();
     }
