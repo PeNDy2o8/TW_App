@@ -30,6 +30,7 @@ import com.example.twapp.Command.RingChange_command;
 import com.example.twapp.Command.Setting_command;
 import com.example.twapp.Command.Theme_command;
 import com.example.twapp.ChangeIcon.Myappicon;
+import com.example.twapp.Login.UserInfo;
 import com.example.twapp.Observer.Observer;
 import com.example.twapp.Visitor.LoggedInVisitor;
 import com.example.twapp.Visitor.NotLoggedInVisitor;
@@ -42,6 +43,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 
 
 public class MainActivity extends AppCompatActivity implements Observer {
+    static String name;
     public static final String TAG = FCMService.TAG;
     private Button btn_CurrentLocation;
     private Button btn_HistoryLocation;
@@ -57,10 +59,12 @@ public class MainActivity extends AppCompatActivity implements Observer {
 //    private Button btn_change;
     private Button btn_Notify;
     private Visitor visitor = new LoggedInVisitor();
+    private Button btn_logout;
     DrawerLayout drawerLayout;
     TextView username;
     Myappicon gv;
     Toolbar toolbar;
+
     public static float fontsize = 20;
     public void onResume(){
         super.onResume();
@@ -73,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
         btn_CurrentLocation = findViewById(R.id.btn_CurrentLocation);
         btn_RingChange = findViewById(R.id.btn_RingChange);
         btn_Notify = findViewById(R.id.btn_Notify);
-
+        btn_logout = findViewById(R.id.btn_logout);
 
 
         btn_setting.setTextSize(fontsize);
@@ -123,7 +127,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
         Command setting_command                 = new Setting_command(receiver);
         Command theme_command                   = new Theme_command(receiver);
 
-        Invoker invoker = new Invoker();
+
 
         gv=(Myappicon)getApplicationContext();
         super.onCreate(savedInstanceState);
@@ -150,17 +154,31 @@ public class MainActivity extends AppCompatActivity implements Observer {
         btn_Notify = findViewById(R.id.btn_Notify);
         btn_setting = findViewById(R.id.btn_setting);
         btn_Theme = findViewById(R.id.btn_Theme);
+
         username=findViewById(R.id.user_name);
+
 
 
         //側拉相關按鈕
         btn_LogIn=findViewById(R.id.btn_login);
+        btn_logout = findViewById(R.id.btn_logout);
         btn_LogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 login_command.accept(visitor);
             }
         });
+        btn_logout.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                UserInfo.setName(null);
+                System.out.println(UserInfo.getName());
+                login_command.accept(visitor);
+            }
+        });
+
+
         btn_Light.setOnClickListener(new View.OnClickListener(){
             int flag = 0;
             boolean light ;
@@ -212,7 +230,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
 
             @Override
             public void onClick(View view) {
-                historyLocation_command.accept(visitor);
+                historyHealthConditions_command.accept(visitor);
             }
         });
 
@@ -252,10 +270,16 @@ public class MainActivity extends AppCompatActivity implements Observer {
             }
         });
         gv.attach(this);
+        username=findViewById(R.id.user_name);
+        username.setText(name);
     }
 
     @Override
     public void update() {
+        name=gv.getName();
+        username=findViewById(R.id.user_name);
+        username.setText(name);
+        username.setTextSize(12);
         username.setText(gv.getName());
         Toast.makeText(MainActivity.this,"welcome! "+username.getText(),Toast.LENGTH_LONG).show();
     }

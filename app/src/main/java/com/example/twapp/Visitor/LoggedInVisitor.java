@@ -2,21 +2,16 @@ package com.example.twapp.Visitor;
 
 import com.example.twapp.Command.AbnormalRecord_command;
 import com.example.twapp.Command.Changeicon_command;
-import com.example.twapp.Command.Command;
 import com.example.twapp.Command.CurrentLocation_command;
 import com.example.twapp.Command.HealthConditions_command;
 import com.example.twapp.Command.HistoryHealthConditions_command;
 import com.example.twapp.Command.HistoryLocation_command;
-import com.example.twapp.Command.Invoker;
 import com.example.twapp.Command.Light_sw_command;
 import com.example.twapp.Command.Login_command;
 import com.example.twapp.Command.Notify_command;
 import com.example.twapp.Command.RingChange_command;
 import com.example.twapp.Command.Setting_command;
 import com.example.twapp.Command.Theme_command;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class LoggedInVisitor implements Visitor{
 
@@ -79,4 +74,5 @@ public class LoggedInVisitor implements Visitor{
     public void visit(Theme_command theme) {
         theme.execute();
     }
+
 }

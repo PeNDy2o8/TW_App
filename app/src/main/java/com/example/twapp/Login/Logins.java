@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,7 +12,6 @@ import android.widget.Toast;
 import com.example.twapp.ChangeIcon.Myappicon;
 import com.example.twapp.MainActivity;
 import com.example.twapp.R;
-import com.example.twapp.UserInfo;
 
 import retrofit2.Call;
 import retrofit2.Callback;
