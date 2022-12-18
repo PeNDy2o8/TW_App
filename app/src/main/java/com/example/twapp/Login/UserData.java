@@ -4,7 +4,7 @@ public class UserData {
     private String account;
     private String password;
     private String name;
-   private String telephone;
+    private String telephone;
 
     public UserData(String account, String password, String name, String telephone) {
         this.account = account;
@@ -12,6 +12,7 @@ public class UserData {
         this.name = name;
         this.telephone = telephone;
     }
+
 
     public String getAccount() {
         return account;

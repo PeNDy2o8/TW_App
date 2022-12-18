@@ -1,7 +1,6 @@
 package com.example.twapp;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -31,7 +30,11 @@ import com.example.twapp.Command.RingChange_command;
 import com.example.twapp.Command.Setting_command;
 import com.example.twapp.Command.Theme_command;
 import com.example.twapp.ChangeIcon.Myappicon;
+import com.example.twapp.Login.UserInfo;
 import com.example.twapp.Observer.Observer;
+import com.example.twapp.Visitor.LoggedInVisitor;
+import com.example.twapp.Visitor.NotLoggedInVisitor;
+import com.example.twapp.Visitor.Visitor;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
@@ -40,8 +43,9 @@ import com.google.firebase.messaging.FirebaseMessaging;
 
 
 public class MainActivity extends AppCompatActivity implements Observer {
-    public static final String TAG = FCMService.TAG;
     static String name;
+    public static final String TAG = FCMService.TAG;
+
     private Button btn_CurrentLocation;
     private Button btn_HistoryLocation;
     private Button btn_HealthConditions;
@@ -55,10 +59,13 @@ public class MainActivity extends AppCompatActivity implements Observer {
     private  Button btn_LogIn;
 //    private Button btn_change;
     private Button btn_Notify;
+    private Visitor visitor = new LoggedInVisitor();
+    private Button btn_logout;
     DrawerLayout drawerLayout;
     TextView username;
     Myappicon gv;
     Toolbar toolbar;
+
     public static float fontsize = 20;
     public void onResume(){
         super.onResume();
@@ -71,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
         btn_CurrentLocation = findViewById(R.id.btn_CurrentLocation);
         btn_RingChange = findViewById(R.id.btn_RingChange);
         btn_Notify = findViewById(R.id.btn_Notify);
-
+        btn_logout = findViewById(R.id.btn_logout);
 
 
         btn_setting.setTextSize(fontsize);
@@ -102,6 +109,11 @@ public class MainActivity extends AppCompatActivity implements Observer {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Receiver receiver = new Receiver(this);
+        if (UserInfo.getName()==null){
+            visitor = new NotLoggedInVisitor(receiver);
+        }else{
+            visitor = new LoggedInVisitor();
+        }
 
         Command abnormalRecord_command          = new AbnormalRecord_command(receiver);
         Command changeicon_command              = new Changeicon_command(receiver);
@@ -116,9 +128,9 @@ public class MainActivity extends AppCompatActivity implements Observer {
         Command setting_command                 = new Setting_command(receiver);
         Command theme_command                   = new Theme_command(receiver);
 
-        Invoker invoker = new Invoker();
 
-         gv=(Myappicon)getApplicationContext();
+
+        gv=(Myappicon)getApplicationContext();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         FirebaseMessaging.getInstance().subscribeToTopic("news");
@@ -143,18 +155,31 @@ public class MainActivity extends AppCompatActivity implements Observer {
         btn_Notify = findViewById(R.id.btn_Notify);
         btn_setting = findViewById(R.id.btn_setting);
         btn_Theme = findViewById(R.id.btn_Theme);
+
         username=findViewById(R.id.user_name);
+
 
 
         //側拉相關按鈕
         btn_LogIn=findViewById(R.id.btn_login);
+        btn_logout = findViewById(R.id.btn_logout);
         btn_LogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                invoker.addCommand(login_command);
-                invoker.executeCommand();
+                login_command.accept(visitor);
             }
         });
+        btn_logout.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                UserInfo.setName(null);
+                System.out.println(UserInfo.getName());
+                login_command.accept(visitor);
+            }
+        });
+
+
         btn_Light.setOnClickListener(new View.OnClickListener(){
             int flag = 0;
             boolean light ;
@@ -175,16 +200,14 @@ public class MainActivity extends AppCompatActivity implements Observer {
 
             @Override
             public void onClick(View view) {
-                invoker.addCommand(currentLocation_command);
-                invoker.executeCommand();
+                currentLocation_command.accept(visitor);
             }
         });
         btn_Theme.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view) {
-                invoker.addCommand(theme_command);
-                invoker.executeCommand();
+                theme_command.accept(visitor);
             }
         });
 
@@ -192,8 +215,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
 
             @Override
             public void onClick(View view) {
-                invoker.addCommand(historyLocation_command);
-                invoker.executeCommand();
+                historyLocation_command.accept(visitor);
             }
         });
 
@@ -201,8 +223,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
 
             @Override
             public void onClick(View view) {
-                invoker.addCommand(healthConditions_command);
-                invoker.executeCommand();
+                healthConditions_command.accept(visitor);
             }
         });
 
@@ -210,8 +231,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
 
             @Override
             public void onClick(View view) {
-                invoker.addCommand(historyHealthConditions_command);
-                invoker.executeCommand();
+                historyHealthConditions_command.accept(visitor);
             }
         });
 
@@ -219,23 +239,20 @@ public class MainActivity extends AppCompatActivity implements Observer {
 
             @Override
             public void onClick(View view) {
-                invoker.addCommand(abnormalRecord_command);
-                invoker.executeCommand();
+                abnormalRecord_command.accept(visitor);
             }
         });
 
         btn_RingChange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                invoker.addCommand(ringChange_command);
-                invoker.executeCommand();
+                ringChange_command.accept(visitor);
             }
         });
         btn_changeicon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                invoker.addCommand(changeicon_command);
-                invoker.executeCommand();
+                changeicon_command.accept(visitor);
             }
         }
         );
@@ -243,16 +260,14 @@ public class MainActivity extends AppCompatActivity implements Observer {
 
             @Override
             public void onClick(View view) {
-                invoker.addCommand(notify_command);
-                invoker.executeCommand();
+                notify_command.accept(visitor);
             }
         });
         btn_setting.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view) {
-                invoker.addCommand(setting_command);
-                invoker.executeCommand();
+                setting_command.accept(visitor);
             }
         });
         gv.attach(this);
