@@ -15,3 +15,4 @@ public class HistoryLocation_command extends Command{
         visitor.visit(this);
     }
 }
+

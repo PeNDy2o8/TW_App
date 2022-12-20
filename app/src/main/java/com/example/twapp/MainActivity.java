@@ -21,13 +21,10 @@ import com.example.twapp.Command.CurrentLocation_command;
 import com.example.twapp.Command.HealthConditions_command;
 import com.example.twapp.Command.HistoryHealthConditions_command;
 import com.example.twapp.Command.HistoryLocation_command;
-import com.example.twapp.Command.Light_sw_command;
 import com.example.twapp.Command.Login_command;
-import com.example.twapp.Command.Notify_command;
 import com.example.twapp.Command.Receiver;
 import com.example.twapp.Command.RingChange_command;
 import com.example.twapp.Command.Setting_command;
-import com.example.twapp.Command.Theme_command;
 import com.example.twapp.ChangeIcon.Myappicon;
 import com.example.twapp.Login.UserInfo;
 import com.example.twapp.Observer.Observer;
@@ -73,10 +70,8 @@ public class MainActivity extends AppCompatActivity implements Observer {
         btn_AbnormalRecord = findViewById(R.id.btn_AbnormalRecord);
         btn_HistoryHealthConditions = findViewById(R.id. btn_HistoryHealthConditions);
         btn_HistoryLocation = findViewById(R.id.btn_HistoryLocation);
-        btn_Light = findViewById(R.id. btn_Light);
         btn_CurrentLocation = findViewById(R.id.btn_CurrentLocation);
         btn_RingChange = findViewById(R.id.btn_RingChange);
-        btn_Notify = findViewById(R.id.btn_Notify);
         btn_logout = findViewById(R.id.btn_logout);
 
 
@@ -85,10 +80,8 @@ public class MainActivity extends AppCompatActivity implements Observer {
         btn_AbnormalRecord.setTextSize(fontsize);
         btn_HistoryHealthConditions.setTextSize(fontsize);
         btn_HistoryLocation.setTextSize(fontsize);
-        btn_Light.setTextSize(fontsize);
         btn_CurrentLocation.setTextSize(fontsize);
         btn_RingChange.setTextSize(fontsize);
-        btn_Notify.setTextSize(fontsize);
 
 
     }
@@ -120,12 +113,9 @@ public class MainActivity extends AppCompatActivity implements Observer {
         Command healthConditions_command        = new HealthConditions_command(receiver);
         Command historyHealthConditions_command = new HistoryHealthConditions_command(receiver);
         Command historyLocation_command         = new HistoryLocation_command(receiver);
-        Command light_sw_command                = new Light_sw_command(receiver);
         Command login_command                   = new Login_command(receiver);
-        Command notify_command                  = new Notify_command(receiver);
         Command ringChange_command              = new RingChange_command(receiver);
         Command setting_command                 = new Setting_command(receiver);
-        Command theme_command                   = new Theme_command(receiver);
 
 
 
@@ -148,12 +138,9 @@ public class MainActivity extends AppCompatActivity implements Observer {
         btn_HealthConditions = findViewById(R.id.btn_HealthConditions);
         btn_HistoryHealthConditions = findViewById(R.id.btn_HistoryHealthConditions);
         btn_AbnormalRecord = findViewById(R.id.btn_AbnormalRecord);
-        btn_Light = findViewById(R.id.btn_Light);
         btn_RingChange = findViewById(R.id.btn_RingChange);
         btn_changeicon = findViewById(R.id.btn_changeicon);
-        btn_Notify = findViewById(R.id.btn_Notify);
         btn_setting = findViewById(R.id.btn_setting);
-        btn_Theme = findViewById(R.id.btn_Theme);
 
         username=findViewById(R.id.user_name);
 
@@ -178,23 +165,6 @@ public class MainActivity extends AppCompatActivity implements Observer {
             }
         });
 
-
-        btn_Light.setOnClickListener(new View.OnClickListener(){
-            int flag = 0;
-            boolean light ;
-            @Override
-            public void onClick(View view){
-                switch(flag){
-                    case 0:
-                        light= true;
-                        break;
-                    case 1:
-                        light= false;
-                        break;
-                }
-            }
-        });
-
         btn_CurrentLocation.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -202,13 +172,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
                 currentLocation_command.accept(visitor);
             }
         });
-        btn_Theme.setOnClickListener(new View.OnClickListener(){
 
-            @Override
-            public void onClick(View view) {
-                theme_command.accept(visitor);
-            }
-        });
 
         btn_HistoryLocation.setOnClickListener(new View.OnClickListener(){
 
@@ -255,13 +219,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
             }
         }
         );
-        btn_Notify.setOnClickListener(new View.OnClickListener(){
 
-            @Override
-            public void onClick(View view) {
-                notify_command.accept(visitor);
-            }
-        });
         btn_setting.setOnClickListener(new View.OnClickListener(){
 
             @Override

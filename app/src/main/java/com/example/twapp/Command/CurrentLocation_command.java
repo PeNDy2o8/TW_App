@@ -9,9 +9,11 @@ public class CurrentLocation_command extends Command{
         super(receiver);
     }
     @Override
-    public void execute() {receiver.action(MapsActivity.class);
+    public void execute() {
+        receiver.action(MapsActivity.class);
     }
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
 }
+

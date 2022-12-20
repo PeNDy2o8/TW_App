@@ -24,12 +24,13 @@
     <string name="Password">密碼</string>
     <string name="Account">帳號</string>
     <string name="Log_In">登入</string>
-    <string name="createAccount">createAccount</string>
-    <string name="Name">Name</string>
-    <string name="Telephone">Telephone</string>
-    <string name="Create_Account">Create Account</string>
-    <string name="create">Create</string>
-    <string name="Logout">Logout</string>
-
+    <string name="createAccount">註冊帳號</string>
+    <string name="Name">姓名</string>
+    <string name="Telephone">電話</string>
+    <string name="Create_Account">註冊帳號</string>
+    <string name="create">註冊</string>
+    <string name="Logout">登出</string>
+    <string name="drawer_open">Drawer opened</string>
+    <string name="drawer_close">Drawer closed</string>
 
 </resources>

@@ -57,18 +57,12 @@
              "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
         -->
         <activity
-            android:name=".BaseActivity.ElectroCardioGraphy"
-            android:exported="false" />
-        <activity
             android:name=".BaseActivity.AbnormalRecord"
             android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCLJkTj9SezcIJXVnRieHwBn2mVCLSqBFw" />
-        <activity
-            android:name=".Notify"
-            android:exported="false" />
 
         <activity android:name=".Observer.NotifyObserver"
             android:exported="false"
