@@ -22,3 +22,5 @@ public interface Visitor {
     public void visit(RingChange_command ringChange);
     public void visit(Setting_command setting);
 }
+
+

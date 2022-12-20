@@ -19,9 +19,9 @@ public class Attention_Algo implements Algorithms {
 
             dialog.setTitle("                 Notice!");
             dialog.setIcon(android.R.drawable.ic_dialog_info);
-            dialog.setMessage("Seems that your heart rate is unusual\nAre you exercising?");
-            dialog.setPositiveButton("No", null);
-            dialog.setNeutralButton("Yes", new DialogInterface.OnClickListener() {
+            dialog.setMessage("Seems that your heart rate is unusual\nIs everything alright?");
+            dialog.setPositiveButton("Yes", null);
+            dialog.setNeutralButton("No", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     d = false;
