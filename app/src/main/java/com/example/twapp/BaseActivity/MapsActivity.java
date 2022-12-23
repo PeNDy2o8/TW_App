@@ -63,7 +63,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             protected Void doInBackground(Void... Void) {
                 Request request = new Request.Builder()
-                        .url("https://6e25-49-213-197-9.jp.ngrok.io/Condition/gettop/2")
+                        .url("https://6e25-49-213-197-9.jp.ngrok.io:443/Condition/get/1")
                         .build();
 
 
@@ -94,7 +94,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 LatLng location = new LatLng(latigps,longgps );
                 mMap.addMarker(new MarkerOptions().position(location).title("Marker in Elder"));
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(location));
-                mMap.setMinZoomPreference(15.0f);
+                mMap.setMinZoomPreference(16.0f);
             }
 
 
