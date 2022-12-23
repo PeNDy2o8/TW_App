@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.util.Log;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -26,6 +27,7 @@ import com.example.twapp.Command.Receiver;
 import com.example.twapp.Command.RingChange_command;
 import com.example.twapp.Command.Setting_command;
 import com.example.twapp.ChangeIcon.Myappicon;
+import com.example.twapp.Login.Logins;
 import com.example.twapp.Login.UserInfo;
 import com.example.twapp.Observer.Observer;
 import com.example.twapp.Visitor.LoggedInVisitor;
@@ -164,7 +166,10 @@ public class MainActivity extends AppCompatActivity implements Observer {
                 gv.setAccount(null);
                 gv.setTelephone(null);
                 System.out.println(UserInfo.getName());
-                login_command.accept(visitor);
+//                Intent intent=new Intent(MainActivity.this, MainActivity.class);
+//                startActivity(intent);
+                MainActivity.this.finish();
+
             }
         });
 

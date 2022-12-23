@@ -57,6 +57,7 @@ public class Logins extends AppCompatActivity {
 
                            Intent intent=new Intent(Logins.this, MainActivity.class);
                            startActivity(intent);
+                           Logins.this.finish();
                        }else {
                            Toast.makeText(Logins.this,"Error account Please check your account or password",Toast.LENGTH_LONG).show();
 
