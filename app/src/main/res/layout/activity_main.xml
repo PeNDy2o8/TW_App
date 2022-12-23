@@ -44,7 +44,7 @@
             app:layout_constraintHorizontal_bias="0.45"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.6"
+            app:layout_constraintVertical_bias="0.84"
             tools:ignore="HardcodedText" />
 
         <Button
@@ -80,7 +80,7 @@
             app:layout_constraintHorizontal_bias="0.45"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.72"
+            app:layout_constraintVertical_bias="0.6"
             tools:ignore="HardcodedText" />
 
         <Button
@@ -98,7 +98,7 @@
             app:layout_constraintHorizontal_bias="0.45"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.84"
+            app:layout_constraintVertical_bias="0.24"
             tools:ignore="HardcodedText" />
 
         <Button
@@ -117,32 +117,32 @@
             app:layout_constraintHorizontal_bias="0.45"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.48"
+            app:layout_constraintVertical_bias="0.12"
             tools:ignore="HardcodedText" />
 
         <Button
-        android:id="@+id/btn_HistoryLocation"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+            android:id="@+id/btn_HistoryLocation"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
             android:layout_marginTop="10dp"
-        android:background="@drawable/shape_capsule"
-        android:fontFamily="sans-serif-medium"
-        android:includeFontPadding="false"
-        android:text="Historical Location"
-        android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.24"
-        tools:ignore="HardcodedText"
-        tools:visibility="visible" />
+            android:background="@drawable/shape_capsule"
+            android:fontFamily="sans-serif-medium"
+            android:includeFontPadding="false"
+            android:text="Historical Location"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.48"
+            tools:ignore="HardcodedText"
+            tools:visibility="visible" />
 
-    <Button
+        <Button
         android:id="@+id/btn_CurrentLocation"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -177,7 +177,7 @@
             app:layout_constraintHorizontal_bias="0.45"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.12"
+            app:layout_constraintVertical_bias="0.72"
             tools:ignore="HardcodedText" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

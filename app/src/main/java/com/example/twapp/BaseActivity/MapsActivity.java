@@ -63,13 +63,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             protected Void doInBackground(Void... Void) {
                 Request request = new Request.Builder()
-                        .url("https://5410-49-213-197-9.jp.ngrok.io/Condition/gettop/1")
+                        .url("https://6e25-49-213-197-9.jp.ngrok.io/Condition/gettop/2")
                         .build();
 
 
                 try (Response response = client.newCall(request).execute()) {
+                    JSONArray jsonArray = new JSONArray(response.body().string());
                     if (response.code() == 200) {
-                        JSONArray jsonArray = new JSONArray(response.body().string());
+
+
                         for (int i = 0; i < jsonArray.length(); i++) {
                             JSONObject j =  jsonArray.getJSONObject(i);
                             longgps = Double.parseDouble(j.getString("longgps"));
@@ -80,7 +82,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     }
                     System.out.println(longgps);
                     System.out.println(latigps);
-
+                    System.out.println(jsonArray);
 
                 } catch (IOException | JSONException e) {
                     e.printStackTrace();
@@ -100,8 +102,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
         new getLocationTask().execute();
 
-//        System.out.println(longgps);
-//        System.out.println(latigps);
+        System.out.println(longgps);
+        System.out.println(latigps);
         // Add a marker in Sydney and move the camera
     }
 }
