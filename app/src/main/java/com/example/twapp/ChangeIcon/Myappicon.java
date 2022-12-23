@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Myappicon extends Application implements Subject {
-    private String name="no login";
+    private String name=null;
     private String account;
     private String Telephone;
     private List<Observer> observers;

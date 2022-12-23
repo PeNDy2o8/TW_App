@@ -59,7 +59,7 @@ import okhttp3.Response;
             @Override
             protected Void doInBackground(Void... Void) {
                 Request request = new Request.Builder()
-                        .url("https://b234-49-213-197-9.jp.ngrok.io:443/Condition/get/1")
+                        .url("https://5410-49-213-197-9.jp.ngrok.io/Condition/get/1")
                         .build();
 
 
