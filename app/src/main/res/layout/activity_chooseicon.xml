@@ -8,8 +8,8 @@
 
     <Button
         android:id="@+id/icon1"
-        android:layout_width="172dp"
-        android:layout_height="183dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
         android:drawableBottom="@mipmap/wristband"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,8 +20,8 @@
 
     <Button
         android:id="@+id/icon2"
-        android:layout_width="177dp"
-        android:layout_height="183dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
         android:drawableBottom="@mipmap/wristband2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,8 +32,8 @@
 
     <Button
         android:id="@+id/icon3"
-        android:layout_width="176dp"
-        android:layout_height="186dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
         android:drawableBottom="@mipmap/wristband3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

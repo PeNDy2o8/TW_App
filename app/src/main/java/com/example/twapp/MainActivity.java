@@ -6,7 +6,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.content.Intent;
 import android.util.Log;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -15,6 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.twapp.ChangeIcon.Myappicon;
 import com.example.twapp.Command.AbnormalRecord_command;
 import com.example.twapp.Command.Changeicon_command;
 import com.example.twapp.Command.Command;
@@ -26,8 +26,6 @@ import com.example.twapp.Command.Login_command;
 import com.example.twapp.Command.Receiver;
 import com.example.twapp.Command.RingChange_command;
 import com.example.twapp.Command.Setting_command;
-import com.example.twapp.ChangeIcon.Myappicon;
-import com.example.twapp.Login.Logins;
 import com.example.twapp.Login.UserInfo;
 import com.example.twapp.Observer.Observer;
 import com.example.twapp.Visitor.LoggedInVisitor;
