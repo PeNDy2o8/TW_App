@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.util.Log;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -26,6 +27,7 @@ import com.example.twapp.Command.Receiver;
 import com.example.twapp.Command.RingChange_command;
 import com.example.twapp.Command.Setting_command;
 import com.example.twapp.ChangeIcon.Myappicon;
+import com.example.twapp.Login.Logins;
 import com.example.twapp.Login.UserInfo;
 import com.example.twapp.Observer.Observer;
 import com.example.twapp.Visitor.LoggedInVisitor;
@@ -101,7 +103,8 @@ public class MainActivity extends AppCompatActivity implements Observer {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Receiver receiver = new Receiver(this);
-        if (UserInfo.getName()==null){
+        gv=(Myappicon)getApplicationContext();
+        if (gv.getName()==null){
             visitor = new NotLoggedInVisitor(receiver);
         }else{
             visitor = new LoggedInVisitor();
@@ -119,7 +122,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
 
 
 
-        gv=(Myappicon)getApplicationContext();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         FirebaseMessaging.getInstance().subscribeToTopic("news");
@@ -159,9 +162,14 @@ public class MainActivity extends AppCompatActivity implements Observer {
 
             @Override
             public void onClick(View v) {
-                UserInfo.setName(null);
+                gv.setName(null);
+                gv.setAccount(null);
+                gv.setTelephone(null);
                 System.out.println(UserInfo.getName());
-                login_command.accept(visitor);
+//                Intent intent=new Intent(MainActivity.this, MainActivity.class);
+//                startActivity(intent);
+                MainActivity.this.finish();
+
             }
         });
 

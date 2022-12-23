@@ -54,11 +54,10 @@ public class Logins extends AppCompatActivity {
                            gv.setName(response.body().getName());
                            gv.setAccount(response.body().getAccount());
                            gv.setTelephone(response.body().getTelephone());
-                           UserInfo.setName(response.body().getName());
-                           UserInfo.setAccount(response.body().getAccount());
-                           UserInfo.setTelephone(response.body().getTelephone());
+
                            Intent intent=new Intent(Logins.this, MainActivity.class);
                            startActivity(intent);
+                           Logins.this.finish();
                        }else {
                            Toast.makeText(Logins.this,"Error account Please check your account or password",Toast.LENGTH_LONG).show();
 

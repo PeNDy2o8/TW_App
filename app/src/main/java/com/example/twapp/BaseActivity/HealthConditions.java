@@ -93,7 +93,7 @@ public class HealthConditions extends AppCompatActivity {
                         @Override
                         protected Void doInBackground(Void... voids) {
                             Request request = new Request.Builder()
-                                    .url("https://b234-49-213-197-9.jp.ngrok.io:443/Condition/gettop2/1")
+                                    .url("https://5410-49-213-197-9.jp.ngrok.io/Condition/gettop2/1")
                                     .build();
                             try (Response response = client.newCall(request).execute()) {
                                 if (response.code() == 200) {
