@@ -13,10 +13,16 @@ public class Alert_Context {
             this.algorithms = new Attention_Algo();
         } else if (hr > 130 || hr < 30) {
             this.algorithms = new Warning_Algo();
+        } else{
+            this.algorithms = null;
         }
     }
 
     public void setAlarm(TextView hr, AlertDialog.Builder dialog) {
         this.algorithms.setAlarm(hr, dialog);
+    }
+
+    public Algorithms getAlgorithms() {
+        return algorithms;
     }
 }

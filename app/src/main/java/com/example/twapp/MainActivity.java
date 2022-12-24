@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
         btn_HistoryLocation.setTextSize(fontsize);
         btn_CurrentLocation.setTextSize(fontsize);
         btn_RingChange.setTextSize(fontsize);
-
+        btn_changeicon.setTextSize(fontsize);
 
     }
 

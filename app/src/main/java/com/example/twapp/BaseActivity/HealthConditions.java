@@ -93,7 +93,7 @@ public class HealthConditions extends AppCompatActivity {
                         @Override
                         protected Void doInBackground(Void... voids) {
                             Request request = new Request.Builder()
-                                    .url("https://6e25-49-213-197-9.jp.ngrok.io/Condition/gettop2/2")
+                                    .url("http://5350-49-213-197-9.ngrok.io/Condition/gettop2/2")
                                     .build();
                             try (Response response = client.newCall(request).execute()) {
                                 if (response.code() == 200) {
@@ -116,12 +116,16 @@ public class HealthConditions extends AppCompatActivity {
                         }
                         protected void onPostExecute(Void t) {
                                 tv_HeartRhythm.setText(HR);
+                                tv_HeartRhythm.setTextSize(80);
                                 tv_BloodOxygen.setText(BO);
                                 tv_State.setText(State);
+                                tv_State.setTextSize(16);
                                 tv_Date.setText(tsSt);
                                 tv_LastHeartRhythm.setText(LHR);
-                                ac.setAlgorithm("120");
-                                ac.setAlarm(tv_HeartRhythm,dialog);
+                                ac.setAlgorithm(HR);
+                                if(ac.getAlgorithms()!=null)
+                                    ac.setAlarm(tv_HeartRhythm,dialog);
+
                         }
                     }
                     new HRget().execute();

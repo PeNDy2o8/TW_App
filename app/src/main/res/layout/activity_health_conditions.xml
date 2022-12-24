@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
         android:text="   "
-        android:textSize="85dp"
+        android:textSize="100dp"
         android:background="@color/white"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -69,17 +69,17 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         android:fontFamily="serif"
         android:text="BPM"
-        android:textSize="24sp"
-        android:background="@color/white"
         android:textColor="@color/black"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.688"
+        app:layout_constraintHorizontal_bias="0.691"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.344" />
+        app:layout_constraintVertical_bias="0.37" />
 
     <FrameLayout
         android:id="@+id/frameLayout"
@@ -187,7 +187,7 @@
             android:text="@string/tv_State"
             android:background="#4D9D9D9D"
             android:textColor="@color/black"
-            android:textSize="35dp" />
+            android:textSize="5dp" />
 
         <TextView
             android:id="@+id/tv_Date"
