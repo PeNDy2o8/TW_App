@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.twapp.ChangeIcon.Myappicon;
+import com.example.twapp.Myappicon;
 import com.example.twapp.MainActivity;
 import com.example.twapp.R;
 

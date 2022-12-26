@@ -1,4 +1,4 @@
-package com.example.twapp.ChangeIcon;
+package com.example.twapp;
 
 import android.app.Application;
 import android.widget.Toast;

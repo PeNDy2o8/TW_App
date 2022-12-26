@@ -14,7 +14,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.twapp.ChangeIcon.Myappicon;
 import com.example.twapp.Command.AbnormalRecord_command;
 import com.example.twapp.Command.Changeicon_command;
 import com.example.twapp.Command.Command;

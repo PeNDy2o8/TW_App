@@ -63,7 +63,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             protected Void doInBackground(Void... Void) {
                 Request request = new Request.Builder()
-                        .url("http://5350-49-213-197-9.ngrok.io/Condition/get/2")
+                        .url("https://g5.minouo.eu.org/Condition/get/2")
                         .build();
 
 
