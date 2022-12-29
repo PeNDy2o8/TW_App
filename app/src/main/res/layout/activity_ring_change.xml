@@ -32,7 +32,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
-
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="161dp"
+            android:layout_height="82dp"
+            android:text="mute"
+            tools:layout_editor_absoluteX="91dp"
+            tools:layout_editor_absoluteY="425dp" />
         <RadioButton
             android:id="@+id/radioButton1"
             android:layout_width="160dp"
