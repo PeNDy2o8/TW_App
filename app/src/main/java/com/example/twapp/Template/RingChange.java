@@ -24,18 +24,23 @@ public class RingChange extends AppCompatActivity {
                 Ringtone nokia=new Nokia(getApplicationContext());
                 Ringtone duck=new Duck(getApplicationContext());
                 Ringtone google=new Google(getApplicationContext());
+                Ringtone mute=new Mute(getApplicationContext());
                 switch (checkedId) {
                     case R.id.radioButton1:
                         if (r.isChecked())
-                        nokia.play();
+                            nokia.execute();
                         break;
                     case R.id.radioButton2:
                         if (r.isChecked())
-                        duck.play();
+                            duck.execute();
                         break;
                     case R.id.radioButton3:
                         if (r.isChecked())
-                        google.play();
+                            google.execute();
+                        break;
+                    case R.id.radioButton4:
+                        if (r.isChecked())
+                            mute.execute();
                         break;
                 }
             }
